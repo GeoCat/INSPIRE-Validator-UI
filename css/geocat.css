@@ -15,6 +15,9 @@ a {
 a p {
   text-decoration: underline;
 }
+.gc-block-inline {
+  display: inline-block;
+}
 
 /* layout */
 .ecl-container .container {
@@ -42,6 +45,29 @@ a p {
   background: url(../img/gc_geocat_logo.svg) no-repeat;
   background-position: right 10px;
   background-size: 200px 30px;
+}
+/* geocat logo */
+.gc-logo {
+  margin-top: 1rem;
+  float: right;
+  width: auto;
+  height: 30px;
+}
+.gc-logo-small {
+  display: none;
+}
+.gc-subtitle {
+  display: none;
+}
+@media (max-width: 425px) {
+  .gc-logo-small {
+    display: block;
+    width: auto;
+    height: 20px;
+  }
+  .gc-logo {
+    display: none;
+  }
 }
 
 /* footer */
