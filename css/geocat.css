@@ -40,12 +40,6 @@ a p {
   color: var(--gc-color);
 }
 
-/* ----- logo */
-.ecl-page-header-core .ecl-container {
-  background: url(../img/gc_geocat_logo.svg) no-repeat;
-  background-position: right 10px;
-  background-size: 200px 30px;
-}
 /* geocat logo */
 .gc-logo {
   margin-top: 1rem;
