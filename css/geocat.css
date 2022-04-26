@@ -1,0 +1,145 @@
+@import url(https://cdn.geocat.net/css/geocat.base.min.css);
+
+/* GeoCat overrides */
+
+/* general */
+body {
+  background-color: var(--gc-background-color-body);
+}
+hr {
+  display: none
+}
+a {
+  text-decoration: none;
+}
+a p {
+  text-decoration: underline;
+}
+
+/* layout */
+.ecl-container .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* header */
+
+/* ----- colours */
+.ecl-page-header-core, .ecl-menu,.ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__list {
+  background-color: var(--gc-background-color-body);
+  color: var(--gc-color);
+  border-bottom-width: 2px;
+}
+.ecl-page-header-core .ecl-container .ecl-container {
+  border-bottom: 1px solid var(--gc-border-color);
+}
+.ecl-page-header-core__title {
+  color: var(--gc-color);
+}
+
+/* ----- logo */
+.ecl-page-header-core .ecl-container {
+  background: url(../img/gc_geocat_logo.svg) no-repeat;
+  background-position: right 10px;
+  background-size: 200px 30px;
+}
+
+/* footer */
+.ecl-footer-standardised {
+  background-color: var(--gc-background-color-body);
+}
+.ecl-footer-standardised__container {
+  border-top: 1px solid var(--gc-border-color);
+}
+.ecl-footer-standardised__description {
+  color: var(--gc-color);
+  margin-top: 1rem;
+}
+
+/* tabs */
+.ecl-menu__item, .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__item {
+  padding-left: 0;
+}
+.ecl-menu__item:nth-child(4), .ecl-menu__item:nth-child(5) {
+  /*display: none;*/
+}
+.ecl-menu__link, .ecl-menu__link:active, .ecl-menu__link:focus, .ecl-menu__link:hover {
+  background-color: var(--gc-link-color);
+}
+@media (min-width: 996px) {
+  .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__link {
+    color: var(--gc-link-color);
+    border-color: var(--gc-link-color);
+    border-bottom-width: 1px;
+    font-weight: normal;
+  }
+}
+.ecl-menu__item .ecl-menu__link {
+  margin-right: 1rem;
+}
+.ecl-menu__link:focus {
+  outline-color: var(--gc-warning);
+}
+@media (min-width: 996px) {
+  .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__item:hover .ecl-menu__link, .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__item:hover .ecl-menu__link:active,
+  .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__item:hover .ecl-menu__link:focus,
+  .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__item:hover .ecl-menu__link:hover,
+  .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__link:hover {
+    background-color: #f2f5f9;
+    color: #004494;
+    transition-property: background-color, border-bottom-color, color, z-index;
+    z-index: 16;
+    filter: brightness(100%);
+  }
+}
+
+/* cards */
+.validator-card {
+  background-color: var(--gc-background-color-default);
+  border-color: var(--gc-border-color);
+  text-decoration: none !important;
+}
+.validator-card .validator-card-description {
+  font-size: var(--gc-font-size-default);
+  color: var(--gc-color);
+  font-weight: normal;
+  text-decoration: none;
+}
+a .validator-card .validator-card-title h4 {
+  text-decoration: none;
+}
+a:focus .validator-card {
+  outline-style: auto;
+  outline-color: var(--gc-warning);
+}
+
+/* special links */
+.inspire-blue {
+  color: var(--gc-link-color);
+}
+/* ----- svg icons */
+svg.inspire-blue {
+  color: var(--gc-gray-700);
+}
+
+/* buttons */
+.btn-inspire-blue {
+  border: 1px solid var(--gc-color);
+}
+.btn-inspire-blue:hover, .btn-inspire-blue:active, .btn-inspire-blue:focus {
+  background-color: var(--gc-success);
+  border-color: var(--gc-success);
+}
+
+/* radios */
+.ecl-radio__input:checked+.ecl-radio__label .ecl-radio__box {
+  border-color: var(--gc-link-color);
+}
+
+/* checkboxes */
+.ecl-checkbox__input:checked+.ecl-checkbox__label .ecl-checkbox__box {
+  background: var(--gc-link-color);
+  border-color: var(--gc-link-color);
+}
+
+/* test results */
