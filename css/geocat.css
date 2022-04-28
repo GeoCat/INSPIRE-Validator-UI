@@ -96,6 +96,7 @@ a p {
 }
 .ecl-menu__item .ecl-menu__link {
   margin-right: 1rem;
+  width: auto;
 }
 .ecl-menu__link:focus {
   outline-color: var(--gc-warning);
@@ -162,4 +163,74 @@ svg.inspire-blue {
   border-color: var(--gc-link-color);
 }
 
+/* test selection */
+.ecl-pagination {
+  border-top: 1px solid var(--gc-border-color);
+}
 /* test results */
+.rTable {
+  padding-top: 15px;
+}
+.rTableRow th, .rTableRow td {
+  padding: 3px 0;
+}
+.line {
+  border-bottom: 1px solid var(--gc-border-color);
+  height: 1px;
+  margin-top: var(--gc-spacing-default);
+  margin-bottom: var(--gc-spacing-default);
+}
+.ecl-u-type-heading-5 {
+  height: auto;
+  margin: 0 !important;
+}
+/* ----- colours */
+.text_PASSED, .text_PASSED_MANUAL {
+  color: var(--gc-success);
+}
+.text_FAILED, .text_INTERNAL_ERROR {
+  color: var(--gc-warning);
+}
+.text_RUNNING {
+  color: var(--gc-color);
+}
+.text_SKIPPED {
+  color: var(--gc-color);
+}
+.bg_grey {
+  background-color: var(--gc-block-background);
+}
+.bg_PASSED, .bg_passed, .bg_PASSED_MANUAL, .bg_passed_manual {
+  background-color: var(--gc-block-background);
+  border-left: 4px solid var(--gc-success);
+}
+.bg_FAILED, .bg_failed {
+  background-color: var(--gc-block-background);
+  border-left: 4px solid var(--gc-danger);
+}
+.bg_INTERNAL_ERROR, .bg_internal_error {
+  background-color: var(--gc-block-background);
+  border-left: 4px solid var(--gc-warning);
+}
+.bg_RUNNING, .bg_running, .bg_UNDEFINED, .bg_undefined, .bg_SKIPPED, .bg_skipped {
+  background-color: var(--gc-block-background);
+}
+.border_PASSED, .border_passed, .border_PASSED_MANUAL, .border_passed_manual {
+  border-color: var(--gc-success);
+}
+.border_FAILED, .border_failed {
+  border-color: var(--gc-danger);
+}
+.border_INTERNAL_ERROR, .border_internal_error,.border_RUNNING, .border_running, .border_UNDEFINED, .border_undefined {
+  border-color: var(--gc-border-color);
+}
+.border_SKIPPED, .border_skipped {
+  border-color: var(--gc-dark);
+}
+.buttons_links {
+  color: var(--gc-link-color);
+}
+.expandableContent {
+  border: 1px solidvar(--gc-dark);
+  padding: 8px;
+}
