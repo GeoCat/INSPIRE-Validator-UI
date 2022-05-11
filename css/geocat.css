@@ -133,6 +133,9 @@ a:focus .validator-card {
   outline-style: auto;
   outline-color: var(--gc-warning);
 }
+a:hover {
+  filter: none;
+}
 a:hover .validator-card {
   background-color: var(--gc-gray-200);
 }
