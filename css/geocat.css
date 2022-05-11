@@ -133,6 +133,17 @@ a:focus .validator-card {
   outline-style: auto;
   outline-color: var(--gc-warning);
 }
+a:hover .validator-card {
+  background-color: var(--gc-gray-200);
+}
+a:hover .validator-card p {
+  color: var(--gc-link-color);
+}
+a:hover .validator-card .btn-inspire-blue {
+  color: var(--gc-white);
+  background-color: var(--gc-success);
+  border-color: var(--gc-success);
+}
 
 /* special links */
 .inspire-blue {
