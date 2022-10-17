@@ -742,6 +742,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID519a1f46-1e52-4a86-8d53-23fb39000665") testSuiteDesc = "Conformance Class 'Information accessibility, Buildings'";
 			if (testSuiteId == "EID32fda995-1c2e-4a62-ab3b-d0fca47ecc8b") testSuiteDesc = "Conformance Class 'Reference systems, Buildings'";
 
+			if (testSuiteId == "EIDc435378c-52c4-4c82-8b8b-80890720afd2") testSuiteDesc = "Conformance Class 'INSPIRE GML application schemas (For BU3D)'";
 			if (testSuiteId == "EID94fdd1a9-68bf-4a0a-aa89-76659436a676") testSuiteDesc = "Conformance Class 'GML application schemas, Buildings (For BU3D)'";
 			if (testSuiteId == "EID45e5267c-ab6e-4bb7-a6b3-ee7b7ec5e053") testSuiteDesc = "Conformance Class 'Application Schema, BuildingsBase (For BU3D)'";
 			if (testSuiteId == "EID97868e65-3205-4dae-be56-651278005ccc") testSuiteDesc = "Conformance Class 'Application Schema, Buildings3D'";
