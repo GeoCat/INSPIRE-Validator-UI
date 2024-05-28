@@ -1,7 +1,8 @@
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <title>INSPIRE Validator - Test selection</title>
+    <title>INSPIRE Reference Validator - Test selection</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -56,7 +57,7 @@
     <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
       <div class="ecl-page-header-core">
         <div class="ecl-container">
-          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - Staging instance</span></h1>
+          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
           <a href="https://www.geocat.net" target="_blank" title="Visit the GeoCat website">
             <svg class="gc-logo" viewBox="0 0 999 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g transform="translate(0.000000, -0.000000)">
@@ -110,7 +111,7 @@
             </svg>
             <svg class="gc-logo-small" viewBox="0 0 207 207" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Logo/GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
+                <g id="Logo-GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
                   <g id="gc_geocat_logo_only" transform="translate(11.000000, 0.000000)">
                     <g id="Group" transform="translate(0.523688, 0.000000)">
                       <path d="M138.791293,61.8553137 L152.636364,52.4391805 C139.900128,40.2586428 122.724712,32.7746479 103.889885,32.7746479 C65.1190781,32.7746479 33.546735,64.3444302 33.5390525,103.117798 C33.5480154,141.892446 65.1152369,174.026889 103.895006,174.026889 C127.206146,174.026889 147.959027,162.386684 160.854033,144.668374 L138.786172,144.668374 C129.37388,152.699104 117.184379,157.408451 103.895006,157.408451 C73.978233,157.408451 49.8822023,133.31242 49.8834827,103.116517 C49.8847631,73.2099872 73.9846351,49.1152369 103.891165,49.1152369 C117.18694,49.1139565 129.653009,53.822023 138.791293,61.8553137" id="Shape" fill="#0C97CE"></path>
@@ -121,36 +122,33 @@
               </g>
             </svg>
           </a>
-          <nav class="ecl-menu" aria-expanded="false" data-ecl-menu="true">
+          <nav id="mainMenu" class="ecl-menu" data-ecl-menu="" data-ecl-auto-init="Menu" aria-expanded="false" data-ecl-auto-initialized="true">
             <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
-            <div class="ecl-container ecl-menu__container"><a class="ecl-link ecl-link--standalone ecl-menu__open" href="/example"
-                data-ecl-menu-open="true"><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
-              <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
+            <div class="ecl-container ecl-menu__container"><a id="menu" class="ecl-link ecl-link--standalone ecl-menu__open"
+                                                              data-ecl-menu-open=""><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
+                <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
             </svg>Menu</a>
-              <section class="ecl-menu__inner" data-ecl-menu-inner="true">
-                <header class="ecl-menu__inner-header"><button data-ecl-menu-close="true" type="submit"
-                    class="ecl-menu__close ecl-button ecl-button--text"><span
-                      class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
-                        data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
+                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner="">
+                    <header class="ecl-menu__inner-header"><button id="close" data-ecl-menu-close="true" type="submit"
+                                                                   class="ecl-menu__close ecl-button ecl-button--text"><span
+                            class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
+                                                                                         data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--close-filled"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Close</span></span></button>
-                  <div class="ecl-menu__title">Menu</div><button data-ecl-menu-back="true" type="submit"
-                    class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
-                        aria-hidden="true" data-ecl-icon="true"
-                        class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
+                        <div class="ecl-menu__title">Menu</div><button id="back" data-ecl-menu-back="true" type="submit"
+                                                                       class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
+                                                                                                                                                                   aria-hidden="true" data-ecl-icon="true"
+                                                                                                                                                                   class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
                 </header>
                 <ul class="ecl-menu__list">
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Home</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-selection/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test selection</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-reports/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test reports</a>
-                  </li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-menu__link"
+                                                                               data-ecl-menu-link="">Home</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test selection</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test reports</a></li>
                 </ul>
               </section>
             </div>
@@ -159,11 +157,13 @@
       </div>
     </header>
 
+    <div class="ecl-container ecl-u-type-m">
     <form name="testSelection" action="https://inspire.ec.europa.eu/validator/v2/TestObjects" method="post" enctype="multipart/form-data">
       <input type="hidden" name="uploadTestObjectId" id="uploadTestObjectId" value="">
-    <div class="ecl-u-pv-3xl ecl-u-pv-lg-4xl" ng-controller="myValidatorController">
-      <div class="ecl-container ecl-u-type-m">
-        <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-mv-none" id="title-test">Configure your test</h2>
+    <div  class="ecl-u-pb-lg-4xl" ng-controller="myValidatorController">
+      <div class="ecl-container">
+                  <h2 class="ecl-u-type-heading-2">Test selection</h2>
+        <h2 class="ecl-u-type-heading-2" id="title-test">Configure your test</h2>
 
         <div id="type-resource-group" class="radio-group">
           <fieldset aria-describedby="type-resource-0" class="ecl-form-group">
@@ -211,7 +211,7 @@
             <fieldset aria-describedby="metadata-records-1" class="ecl-form-group">
               <legend class="ecl-form-label">Select the type of metadata record(s) to be tested</legend>
                 <div class="ecl-radio"><input type="radio" id="metadata-records-1" name="metadata-records" class="ecl-radio__input"
-                   value="dataset" aria-describedby="helper-1" ng-click="selectMetadataRecords('metadata_dataset')"/><label for="metadata-records-1" class="ecl-radio__label"><span
+                    value="dataset" aria-describedby="helper-1" ng-click="selectMetadataRecords('metadata_dataset')"/><label for="metadata-records-1" class="ecl-radio__label"><span
                       class="ecl-radio__box"></span>Data sets and data set series</label>
                 </div>
                 <div class="ecl-radio"><input type="radio" id="metadata-records-2" name="metadata-records" class="ecl-radio__input"
@@ -293,6 +293,13 @@
                           class="ecl-checkbox__icon ecl-icon ecl-icon--s">
                           <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
                         </svg></span>Conformance Class 2c: 'INSPIRE data sets and data set series metadata for IACS' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/metadata/2.0/iacs">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="metadata-20-dataset-options-6" 
+                    name="checkbox-default" value="conformanceclass8ds" ng-click="selectMetadataAdvancedConformanceClass8ds()"/><label class="ecl-checkbox__label" for="metadata-20-dataset-options-6"><span
+                      class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true" 
+                        class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                      </svg></span>Conformance Class 8: 'INSPIRE data sets and data set series linked service metadata' (<a target="_linkTest" href= "https://github.com/inspire-eu-validation/metadata/tree/tg-issue108/ds-linked-service">source</a>)</label>
                   </div>
                 </fieldset>
                 <!-- 2.0 & networkservice -->
@@ -443,7 +450,7 @@
             <fieldset aria-describedby="downloadservice-wfs-records-1" class="ecl-form-group">
               <legend class="ecl-form-label">Select the WFS type</legend>
                 <div class="ecl-radio"><input type="radio" id="downloadservice-wfs-records-1" name="downloadservice-wfs-records" class="ecl-radio__input"
-                    value="direct" aria-describedby="helper-1" ng-click="selectDownloadWFSServiceType('direct3')"/><label for="downloadservice-wfs-records-1" class="ecl-radio__label"><span
+                    value="direct" aria-describedby="helper-1" ng-click="selectDownloadWFSServiceType('direct23')"/><label for="downloadservice-wfs-records-1" class="ecl-radio__label"><span
                       class="ecl-radio__box"></span>Direct WFS</label>
                 </div>
                 <div class="ecl-radio"><input type="radio" id="downloadservice-wfs-records-2" name="downloadservice-wfs-records" class="ecl-radio__input"
@@ -2872,7 +2879,6 @@
                         </svg></span>Conformance Class 'Reference systems, Atmospheric Conditions and Meteorological Geographical Features' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-ac-mf/master/ac-mf-rs">source</a>)</label>
                   </div>
                 </fieldset>
-
                 <!-- Area management / restriction / regulation zones & reporting units (AM) -->
                 <fieldset aria-describedby="checkbox-default-helper" class="ecl-form-group" ng-show="select.datasetType.includes('AM')">
                   <legend class="ecl-form-label"><br/>Select the conformance classes to be assessed for ANNEX III - Area management / restriction / regulation zones & reporting units (AM)</legend>
@@ -3426,6 +3432,170 @@
                   </div>
                 </fieldset>
 
+                <!-- Energy Resources Coverage (ERCOV) -->
+                <fieldset aria-describedby="checkbox-default-helper" class="ecl-form-group" ng-show="select.datasetType.includes('ER') && select.subEnergy.includes('ERCOV')">
+                  <legend class="ecl-form-label"><br/>Select the conformance classes to be assessed for ANNEX III - Energy Resources Coverage (ERCOV)</legend>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-1"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('inspire_gml_encoding')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-1"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'INSPIRE GML encoding' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-encoding/master/inspire-gml">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-2"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('gml_application_schemas')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-2"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'INSPIRE GML application schemas' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/schemas">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-3"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('gml_application_schemas_energy')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-3"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'GML application schemas, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-gml">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-4"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('application_schema_energy_base')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-4"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Application Schema, Energy Resources Base' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-as">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-5"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('application_schema_energy_coverage')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-5"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Application Schema, Energy Resources Coverage' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-c-as">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-6"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('data_consistency')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-6"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Data consistency' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/data-consistency">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-7"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('data_consistency_energy')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-7"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Data consistency, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-dc">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-8"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('information_accessibility')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-8"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Information accessibility' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/information-accessibility">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-9"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('information_accessibility_energy')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-9"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Information accessibility, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-ia">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-10"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('reference_systems')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-10"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Reference systems' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/reference-systems">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ercov-options-11"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERCOVAdvanced('reference_systems_energy')"/><label class="ecl-checkbox__label" for="dataset-ercov-options-11"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Reference systems, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-rs">source</a>)</label>
+                  </div>
+                </fieldset>
+                
+                <!-- Energy Resources Vector (ERVEC) -->
+                <fieldset aria-describedby="checkbox-default-helper" class="ecl-form-group" ng-show="select.datasetType.includes('ER') && select.subEnergy.includes('ERVEC')">
+                  <legend class="ecl-form-label"><br/>Select the conformance classes to be assessed for ANNEX III - Energy Resources Vector (ERVEC)</legend>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-1"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('inspire_gml_encoding')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-1"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'INSPIRE GML encoding' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-encoding/master/inspire-gml">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-2"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('gml_application_schemas')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-2"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'INSPIRE GML application schemas' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/schemas">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-3"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('gml_application_schemas_energy')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-3"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'GML application schemas, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-gml">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-4"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('application_schema_energy_base')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-4"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Application Schema, Energy Resources Base' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-as">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-5"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('application_schema_energy_vector')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-5"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Application Schema, Energy Resources Vector' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-v-as">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-6"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('data_consistency')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-6"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Data consistency' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/data-consistency">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-7"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('data_consistency_energy')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-7"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Data consistency, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-dc">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-8"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('information_accessibility')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-8"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Information accessibility' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/information-accessibility">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-9"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('information_accessibility_energy')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-9"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Information accessibility, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-ia">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-10"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('reference_systems')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-10"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Reference systems' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data/master/reference-systems">source</a>)</label>
+                  </div>
+                  <div class="ecl-checkbox"><input type="checkbox" class="ecl-checkbox__input" id="dataset-ervec-options-11"
+                      name="checkbox-default" value="inspireprofile" ng-click="selectDatasetAnnexERVECAdvanced('reference_systems_energy')"/><label class="ecl-checkbox__label" for="dataset-ervec-options-11"><span
+                        class="ecl-checkbox__box"><svg focusable="false" aria-hidden="true"
+                          class="ecl-checkbox__icon ecl-icon ecl-icon--s">
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--check"></use>
+                        </svg></span>Conformance Class 'Reference systems, Energy Resources' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-er/master/er-rs">source</a>)</label>
+                  </div>
+                </fieldset>
+                
                 <!-- Habitats and biotopes (HB) -->
                 <fieldset aria-describedby="checkbox-default-helper" class="ecl-form-group" ng-show="select.datasetType.includes('HB')">
                   <legend class="ecl-form-label"><br/>Select the conformance classes to be assessed for ANNEX III - Habitats and biotopes (HB)</legend>
@@ -4100,7 +4270,6 @@
                         </svg></span>Conformance Class 'Reference systems, Oceanographic geographical features' (<a target="_linkTest" href="http://inspire.ec.europa.eu/id/ats/data-of/master/of-rs">source</a>)</label>
                   </div>
                 </fieldset>
-
                 <!-- Population distribution and demography (PD) -->
                 <fieldset aria-describedby="checkbox-default-helper" class="ecl-form-group" ng-show="select.datasetType.includes('PD')">
                   <legend class="ecl-form-label"><br/>Select the conformance classes to be assessed for ANNEX III - Population distribution and demography (PD)</legend>
@@ -5316,13 +5485,14 @@
       </div>
     </div>
     </form>
+    </div>
 
     <!-- FOOTER -->
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
         class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre T1 Unit</div>
     </section>
   </div>
 </footer>
@@ -5350,6 +5520,8 @@
         placeHolder: "-", search: true, disableSelectAll: true, maxWidth: 250
       });
     </script>
+
+    <script src="../js/menu.js"></script>
 
   </body>
 </html>

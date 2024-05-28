@@ -4,6 +4,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
+	$scope.timeUpMessage = timeUpMessage;
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -39,7 +40,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	}
 
 	$scope.roundNumber = function(i) {
-		return Math.round(i + 0.4);
+		return Math.round(i + 0.5);
 	}
 
 	Date.prototype.addHours = function(h) {
@@ -190,6 +191,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 		$scope.searchParameters.startResult = 1;
 		$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+		if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 		$scope.searchParameters.maxRefresh = 4;
 
 		$.getJSON($scope.urlValidator + "TestRuns.json?limit=3000", function(data) {
@@ -201,6 +203,7 @@ ngApp.controller('myValidatorController', function($scope) {
 				$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 				$scope.searchParameters.startResult = 1;
 				$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+				if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 				$scope.contentLoaded = true;
 				$scope.sortTestResults('startTimestamp', 'DESC', false)
 				$scope.$apply();
@@ -652,6 +655,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
 			if (testSuiteId == "EID7514777a-6cb8-499c-acd5-912496dc84e9") testSuiteDesc = "Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata";
 			if (testSuiteId == "EIDa593a7ad-42d9-46d0-985d-9dff3e684428") testSuiteDesc = "Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata";
+			if (testSuiteId == "EID7cceba68-e575-4429-9959-1b6b3d201b6d") testSuiteDesc = "Conformance Class 8: INSPIRE data sets and data set series linked service metadata";	
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";
@@ -900,13 +904,13 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID36dec890-a302-442e-ae35-1edcfa5ca4dd") testSuiteDesc = "Conformance class: 'Information accessibility, Agricultural and Aquaculture Facilities'";
 			if (testSuiteId == "EID2d2491df-b01e-4527-a089-82d6ffa88a80") testSuiteDesc = "Conformance class: 'Reference systems, Agricultural and Aquaculture Facilities'";
 
-			if (testSuiteId == "EID7bc56fcd-d29d-4a71-b6d1-c283e6b63b2c") testSuiteDesc = "Conformance Class 'GML application schemas, Atmospheric Conditions and Meteorological Geographical Features'";
+      if (testSuiteId == "EID7bc56fcd-d29d-4a71-b6d1-c283e6b63b2c") testSuiteDesc = "Conformance Class 'GML application schemas, Atmospheric Conditions and Meteorological Geographical Features'";
 			if (testSuiteId == "EID850a0120-7637-4aef-84aa-5673832e518a") testSuiteDesc = "Conformance Class 'Application schema, Atmospheric Conditions and Meteorological Geographical Features'";
 			if (testSuiteId == "EID8736653c-eee8-4546-a802-ec62f1792262") testSuiteDesc = "Conformance Class 'Data consistency, Atmospheric Conditions and Meteorological Geographical Features'";
 			if (testSuiteId == "EIDac70176c-224c-47ea-864a-b53344a2dec8") testSuiteDesc = "Conformance Class 'Information accessibility, Atmospheric Conditions and Meteorological Geographical Features'";
 			if (testSuiteId == "EIDe714b79c-6219-4177-acb3-e01ac8f4549d") testSuiteDesc = "Conformance Class 'Reference systems, Atmospheric Conditions and Meteorological Geographical Features'";
 
-			if (testSuiteId == "EID46af85e3-f8cc-4812-b8b7-36d99897084c") testSuiteDesc = "Conformance class: 'Application schema, Orthoimagery'";
+      if (testSuiteId == "EID46af85e3-f8cc-4812-b8b7-36d99897084c") testSuiteDesc = "Conformance class: 'Application schema, Orthoimagery'";
 			if (testSuiteId == "EIDdd6d5c5f-6d38-45a1-b85d-b9f2606bff2d") testSuiteDesc = "Conformance class: 'Data consistency, Orthoimagery'";
 			if (testSuiteId == "EID2151146d-da46-4242-9471-0918db59abb5") testSuiteDesc = "Conformance class: 'GML application schemas, Orthoimagery'";
 			if (testSuiteId == "EID3476ab51-fd62-4b19-a563-f3c05373c2ed") testSuiteDesc = "Conformance class: 'Information accessibility, Orthoimagery'";
@@ -1066,7 +1070,7 @@ ngApp.controller('myValidatorController', function($scope) {
 					if (Array.isArray(item.testTasks.TestTask) == false) {
 						var resourceType = item.testTasks.TestTask.executableTestSuite.href;
 						resourceType = resourceType.replace("//v2", "/v2");
-						resourceType = resourceType.replace($scope.urlRealValidator + "ExecutableTestSuites/", "");
+						resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
 						resourceType = resourceType.replace(".json", "");
 						resourceType = "EID" + resourceType;
 						if (arrayTestSuiteId.includes(resourceType)) keyFoundResources = true;
@@ -1075,7 +1079,7 @@ ngApp.controller('myValidatorController', function($scope) {
 						for (var i = 0; i < numTestSuites; i++) {
 							var resourceType = item.testTasks.TestTask[i].executableTestSuite.href;
 							resourceType = resourceType.replace("//v2", "/v2");
-							resourceType = resourceType.replace($scope.urlRealValidator + "ExecutableTestSuites/", "");
+							resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
 							resourceType = resourceType.replace(".json", "");
 							resourceType = "EID" + resourceType;
 							if (arrayTestSuiteId.includes(resourceType)) keyFoundResources = true;

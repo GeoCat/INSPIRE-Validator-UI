@@ -1,7 +1,8 @@
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <title>INSPIRE Validator - Test reports</title>
+    <title>INSPIRE Reference Validator - Test reports</title>
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -52,10 +53,11 @@
 	}</script>
 
     <!-- paste the markup from the template here -->
+    <!-- paste the markup from the template here -->
     <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
       <div class="ecl-page-header-core">
         <div class="ecl-container">
-          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - Staging instance</span></h1>
+          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
           <a href="https://www.geocat.net" target="_blank" title="Visit the GeoCat website">
             <svg class="gc-logo" viewBox="0 0 999 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g transform="translate(0.000000, -0.000000)">
@@ -109,7 +111,7 @@
             </svg>
             <svg class="gc-logo-small" viewBox="0 0 207 207" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Logo/GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
+                <g id="Logo-GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
                   <g id="gc_geocat_logo_only" transform="translate(11.000000, 0.000000)">
                     <g id="Group" transform="translate(0.523688, 0.000000)">
                       <path d="M138.791293,61.8553137 L152.636364,52.4391805 C139.900128,40.2586428 122.724712,32.7746479 103.889885,32.7746479 C65.1190781,32.7746479 33.546735,64.3444302 33.5390525,103.117798 C33.5480154,141.892446 65.1152369,174.026889 103.895006,174.026889 C127.206146,174.026889 147.959027,162.386684 160.854033,144.668374 L138.786172,144.668374 C129.37388,152.699104 117.184379,157.408451 103.895006,157.408451 C73.978233,157.408451 49.8822023,133.31242 49.8834827,103.116517 C49.8847631,73.2099872 73.9846351,49.1152369 103.891165,49.1152369 C117.18694,49.1139565 129.653009,53.822023 138.791293,61.8553137" id="Shape" fill="#0C97CE"></path>
@@ -120,36 +122,33 @@
               </g>
             </svg>
           </a>
-          <nav class="ecl-menu" aria-expanded="false" data-ecl-menu="true">
+          <nav id="mainMenu" class="ecl-menu" data-ecl-menu="" data-ecl-auto-init="Menu" aria-expanded="false" data-ecl-auto-initialized="true">
             <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
-            <div class="ecl-container ecl-menu__container"><a class="ecl-link ecl-link--standalone ecl-menu__open" href="/example"
-                data-ecl-menu-open="true"><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
-              <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
+            <div class="ecl-container ecl-menu__container"><a id="menu" class="ecl-link ecl-link--standalone ecl-menu__open"
+                                                              data-ecl-menu-open=""><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
+                <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
             </svg>Menu</a>
-              <section class="ecl-menu__inner" data-ecl-menu-inner="true">
-                <header class="ecl-menu__inner-header"><button data-ecl-menu-close="true" type="submit"
-                    class="ecl-menu__close ecl-button ecl-button--text"><span
-                      class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
-                        data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
+                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner="">
+                    <header class="ecl-menu__inner-header"><button id="close" data-ecl-menu-close="true" type="submit"
+                                                                   class="ecl-menu__close ecl-button ecl-button--text"><span
+                            class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
+                                                                                         data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--close-filled"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Close</span></span></button>
-                  <div class="ecl-menu__title">Menu</div><button data-ecl-menu-back="true" type="submit"
-                    class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
-                        aria-hidden="true" data-ecl-icon="true"
-                        class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
+                        <div class="ecl-menu__title">Menu</div><button id="back" data-ecl-menu-back="true" type="submit"
+                                                                       class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
+                                                                                                                                                                   aria-hidden="true" data-ecl-icon="true"
+                                                                                                                                                                   class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
                 </header>
                 <ul class="ecl-menu__list">
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Home</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-selection/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test selection</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-reports/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test reports</a>
-                  </li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-menu__link"
+                                                                               data-ecl-menu-link="">Home</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test selection</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test reports</a></li>
                 </ul>
               </section>
             </div>
@@ -158,16 +157,21 @@
       </div>
     </header>
 
-    <div class="ecl-u-pv-3xl ecl-u-pv-lg-4xl" ng-controller="myValidatorController">
+    <div class="ecl-u-pb-lg-4xl" ng-controller="myValidatorController">
       <div ng-show="contentLoaded == false" class="spinner">
       </div>
       <div class="ecl-container ecl-u-type-m" ng-show="contentLoaded">
         <div class="ecl-container">
+            <div class="ecl-row">
+                <div class="ecl-col-s-12 ecl-col-lg-3">
+                    <h2 class="ecl-u-type-heading-2">Test reports</h2>
+                </div>
+            </div>
            <div class="ecl-row">
              <aside class="ecl-col-12 ecl-col-lg-3">
-               <!--- <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-d-lg-none ecl-u-mv-none">Search results (65)</h2> -->
                <h3 class="ecl-u-type-heading-3 ecl-u-type-color-black ecl-u-mt-l ecl-u-mt-lg-none">Search options</h3>
                <form>
+                <label class="ecl-form-label" for="text-input-search-id">Text input<br/></label>
                  <input type="text" id="text-input-search-id" name="text-input-search-name" class="ecl-text-input ecl-text-input--m" disabled="disabled"/><br/>
                  <div class="ecl-form-group"><label class="ecl-form-label" for="facet-resource">Resource type</label>
                    <div class="ecl-select__container ecl-select__container--m"><select id="facet-resource" class="ecl-select" disabled="disabled">
@@ -250,7 +254,7 @@
                  <div id="backgroundStatus" class="rTable bg_{{testItem.status}}">
                    <div class="rTableRow" style="margin-top: -20px">
                      <div class="rTableCell30px">&nbsp;</div>
-                     <div class="rTableCell50px"><img id="iconStatus" src="../img/icons/{{testItem.status}}.png" class="iconResults"/></div>
+                     <div class="rTableCell50px"><img id="iconStatus" src="../img/icons/{{testItem.status}}.png" class="iconResults" alt="{{getAltDescriptionFromStatus(testItem.status)}}"/></div>
                      <div>
                       <h5 class="ecl-u-type-heading-5 ecl-u-type-color-black ecl-u-mb-none ecl-u-mt-3xl ecl-u-mt-lg-l" style="height: 40px; padding-right: 20px;">{{testItem.label}}</h5>
                       <div id="testDetail_{{testItem.id}}">
@@ -299,11 +303,11 @@
           <br/><br/><br/>
           <table style="width: 100%">
              <tr>
-           <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
+           <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail" alt="see report"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail" alt="open log file"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail" alt="download report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail" alt="delete report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail" alt="rerun test"></a></td>
              </tr>
           </table>
                                 </td>
@@ -314,11 +318,11 @@
           <br/>
           <table style="width: 100%">
              <tr>
-          <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail"></a></td>
-          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail"></a></td>
-          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail"></a></td>
+          <td><a id="buttonSeeReport_{{testItem.id}}" target="_buttonLink_{{testItem.id}}" class="buttons_links" href="details.html?id={{testItem.id}}">See report <img style="vertical-align: middle;" src="../img/buttons/see_report.png" class="buttons_detail" alt="see report"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}/log">Log file <img style="vertical-align: middle;" src="../img/buttons/log_file.png" class="buttons_detail" alt="open log file"></a></td>
+          <td><a target="_buttonLink" class="buttons_links" href="{{urlValidator}}TestRuns/{{testItem.id}}.html?download=true">Download report <img style="vertical-align: middle;" src="../img/buttons/download_report.png" class="buttons_detail" alt="download report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="deleteTest(testItem.id)">Delete report <img style="vertical-align: middle;" src="../img/buttons/delete_report.png" class="buttons_detail" alt="delete report"></a></td>
+          <td><a class="buttons_links" href="" ng-click="reRunTest(testItem.id)">Re-run test <img style="vertical-align: middle;" src="../img/buttons/rerun_test.png" class="buttons_detail" alt="rerun test"></a></td>
              </tr>
           </table>
                                 </td>
@@ -335,7 +339,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
                </article>
 
              </main>
@@ -344,14 +347,14 @@
        </div>
     </div>
 
-    <div id="dialog-confirm" title="Delete test?">This will delete the test results including the log files!</p></div>
+    <div id="dialog-confirm" title="Delete test?"><p>This will delete the test results including the log files!</p></div>
 
     <!-- FOOTER -->
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
     <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
         class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre T1 Unit</div>
     </section>
   </div>
 </footer>
@@ -370,6 +373,6 @@
     <script>
       ECL.autoInit();
     </script>
-
+    <script src="../js/menu.js"></script>
   </body>
 </html>

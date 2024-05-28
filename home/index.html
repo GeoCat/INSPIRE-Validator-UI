@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
@@ -63,11 +64,12 @@
       crossorigin="anonymous"
       media="print"
     />
+
+
     <link type="text/css" rel="stylesheet" href="../css/validator.css" />
     <link type="text/css" rel="stylesheet" href="../css/geocat.css" />
   </head>
   <body>
-  
 	<script type="application/json">
 	{
 		"utility" : "cck",
@@ -76,11 +78,11 @@
 		}
 	}</script>
 
-    <!-- paste the markup from the template here -->
+        <!-- paste the markup from the template here -->
     <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
       <div class="ecl-page-header-core">
         <div class="ecl-container">
-          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - Staging instance</span></h1>
+          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
           <a href="https://www.geocat.net" target="_blank" title="Visit the GeoCat website">
             <svg class="gc-logo" viewBox="0 0 999 264" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g transform="translate(0.000000, -0.000000)">
@@ -134,7 +136,7 @@
             </svg>
             <svg class="gc-logo-small" viewBox="0 0 207 207" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="Logo/GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
+                <g id="Logo-GeoCat-GC" transform="translate(-12.000000, 0.000000)" fill-rule="nonzero">
                   <g id="gc_geocat_logo_only" transform="translate(11.000000, 0.000000)">
                     <g id="Group" transform="translate(0.523688, 0.000000)">
                       <path d="M138.791293,61.8553137 L152.636364,52.4391805 C139.900128,40.2586428 122.724712,32.7746479 103.889885,32.7746479 C65.1190781,32.7746479 33.546735,64.3444302 33.5390525,103.117798 C33.5480154,141.892446 65.1152369,174.026889 103.895006,174.026889 C127.206146,174.026889 147.959027,162.386684 160.854033,144.668374 L138.786172,144.668374 C129.37388,152.699104 117.184379,157.408451 103.895006,157.408451 C73.978233,157.408451 49.8822023,133.31242 49.8834827,103.116517 C49.8847631,73.2099872 73.9846351,49.1152369 103.891165,49.1152369 C117.18694,49.1139565 129.653009,53.822023 138.791293,61.8553137" id="Shape" fill="#0C97CE"></path>
@@ -145,36 +147,33 @@
               </g>
             </svg>
           </a>
-          <nav class="ecl-menu" aria-expanded="false" data-ecl-menu="true">
+          <nav id="mainMenu" class="ecl-menu" data-ecl-menu="" data-ecl-auto-init="Menu" aria-expanded="false" data-ecl-auto-initialized="true">
             <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
-            <div class="ecl-container ecl-menu__container"><a class="ecl-link ecl-link--standalone ecl-menu__open" href="/example"
-                data-ecl-menu-open="true"><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
-                  <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
-                </svg>Menu</a>
-              <section class="ecl-menu__inner" data-ecl-menu-inner="true">
-                <header class="ecl-menu__inner-header"><button data-ecl-menu-close="true" type="submit"
-                    class="ecl-menu__close ecl-button ecl-button--text"><span
-                      class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
-                        data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
+            <div class="ecl-container ecl-menu__container"><a id="menu" class="ecl-link ecl-link--standalone ecl-menu__open"
+                                                              data-ecl-menu-open=""><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
+                <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
+            </svg>Menu</a>
+                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner="">
+                    <header class="ecl-menu__inner-header"><button id="close" data-ecl-menu-close="true" type="submit"
+                                                                   class="ecl-menu__close ecl-button ecl-button--text"><span
+                            class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
+                                                                                         data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--close-filled"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Close</span></span></button>
-                  <div class="ecl-menu__title">Menu</div><button data-ecl-menu-back="true" type="submit"
-                    class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
-                        aria-hidden="true" data-ecl-icon="true"
-                        class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
+                        <div class="ecl-menu__title">Menu</div><button id="back" data-ecl-menu-back="true" type="submit"
+                                                                       class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
+                                                                                                                                                                   aria-hidden="true" data-ecl-icon="true"
+                                                                                                                                                                   class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
                         <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
                       </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
                 </header>
                 <ul class="ecl-menu__list">
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Home</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-selection/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test selection</a>
-                  </li>
-                  <li class="ecl-menu__item" data-ecl-menu-item="true">
-                    <a href="../test-reports/index.html" class="ecl-menu__link" data-ecl-menu-link="true" style="margin-right: 1rem;">Test reports</a>
-                  </li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-menu__link"
+                                                                               data-ecl-menu-link="">Home</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test selection</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-menu__link"
+                                                                                data-ecl-menu-link="">Test reports</a></li>
                 </ul>
               </section>
             </div>
@@ -182,6 +181,7 @@
         </div>
       </div>
     </header>
+
 
     <div class="ecl-container">
 
@@ -196,10 +196,10 @@
                 </div>
             </div>
 
-            <div class="row mb-3">
+            <div class="ecl-row">
                 <div class="col-md-12 text_description_home">
                     <p>The purpose of the INSPIRE Reference Validator is to help data providers, solution providers and national coordinators to check whether data sets, network services and metadata meet the requirements defined in the INSPIRE Technical Guidelines. The Validator provides detailed test reports to help implementers understand how well their data, services, metadata or software solutions are doing (or where improvements may be needed).</p>
-                    <p>The Validator is based on the <a href="https://github.com/inspire-eu-validation">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
+                    <p>The Validator is based on the <a href="https://github.com/inspire-eu-validation" class="underline">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues" class="underline">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/" class="underline">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy" class="underline">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
                     <p>The Validator has been developed under <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/are3na" title="ARE3NA Joinup page description">ARE3NA</a> and <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about" title="ELISE  Joinup page description">ELISE</a> Actions of the ISA/ISA2 Programmes.</p>
                 </div>
             </div>
@@ -210,7 +210,7 @@
 
                         <div class="row">
                             <div class="col-sm-12 col-md-2">
-                                <svg class="svg-inline--fa fa-play-circle fa-w-16 inspire-blue fontsize130" aria-hidden="true" focusable="false" data-prefix="far" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg><!-- <i class="far fa-play-circle inspire-blue fontsize130" aria-hidden="true"></i> -->
+                                <svg class="svg-inline--fa fa-play-circle fa-w-16 inspire-blue fontsize100" aria-hidden="true" focusable="false" data-prefix="far" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg><!-- <i class="far fa-play-circle inspire-blue fontsize130" aria-hidden="true"></i> -->
                             </div>
                             <div class="col-sm-12 col-md-10">
                                 <h2 class="validator-card-title-test-data">Test your data, services or metadata</h2>
@@ -225,13 +225,13 @@
                 </div>
             </a>
 
-            <div class="row">
+            <div class="ecl-row">
 
-                <div class="col-md-4">
+                <div class="ecl-col-md-4">
                     <a href="#" onclick= "location.href=swaggerURL">
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                        <div class="validator-card columnbottom">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-cog fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg><!-- <i class="fas fa-cog fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>API</h4></div>
+                            <div class="validator-card-title"><h3>API</h3></div>
                             <div class="validator-card-description">
                                 <p>If you are a developer, you can access and call the operations of the validator API to power your own applications.</p>
                                 <br>
@@ -243,11 +243,11 @@
                     </a>
                 </div>
 
-                <div class="col-md-4">
+                <div class="ecl-col-md-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                        <div class="validator-card columnbottom">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-download fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>Want more?</h4></div>
+                            <div class="validator-card-title"><h3>Want more?</h3></div>
                             <div class="validator-card-description">
                                 <p>Download the software, deploy it in your own infrastructure and customise it to fit your specific needs.</p>
                                 <br>
@@ -259,12 +259,12 @@
                     </a>
                 </div>
 
-                <div class="col-md-4">
+                <div class="ecl-col-md-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new/choose">
 
-                        <div class="validator-card columnbottom" style="height: 351px;">
+                        <div class="validator-card columnbottom">
                             <div class="validator-card-image"><svg class="svg-inline--fa fa-comments fa-w-18 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h4>Feedback</h4></div>
+                            <div class="validator-card-title"><h3>Feedback</h3></div>
                             <div class="validator-card-description">
 
                                 <p>Use the Community space to provide your feedback or proposals on the ATS, ETS or the ETF test framework.</p>
@@ -311,7 +311,8 @@
                     $('.columnbottom', this).height(highestBox);
 
                 });
-            });
+
+      });
         </script>
 
 
@@ -321,9 +322,10 @@
     <!-- FOOTER -->
     <footer class="ecl-footer-standardised">
   <div class="ecl-container ecl-footer-standardised__container">
-    <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
+    <section class="ecl-footer-standardised__section ecl-footer-standardised__section1">
+        <a href=""
         class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre B6 Unit</div>
+      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre T1 Unit</div>
     </section>
   </div>
 </footer>
@@ -346,6 +348,6 @@
 		$("#titleWebPageHeader").show();
 	  }
     </script>
-
+    <script src="../js/menu.js"></script>
   </body>
 </html>

@@ -19,7 +19,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	}
 
 	$scope.roundNumber = function(i) {
-		return Math.round(i + 0.4);
+		return Math.round(i + 0.5);
 	}
 
 	Date.prototype.addHours = function(h) {
@@ -138,6 +138,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 		$scope.searchParameters.startResult = 1;
 		$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+		if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 		$scope.readDataForm();
 
 		$.getJSON($scope.urlValidator + "TestRuns/" + $scope.testRunId + ".json", function(data) {
@@ -156,6 +157,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			$scope.searchParameters.numPages = $scope.roundNumber($scope.numResults / $scope.searchParameters.pageSize);
 			$scope.searchParameters.startResult = 1;
 			$scope.searchParameters.endResult = $scope.searchParameters.pageSize;
+			if ($scope.searchParameters.endResult > $scope.numResults) $scope.searchParameters.endResult = $scope.numResults;
 			$scope.contentLoaded = true;
 			$scope.$apply();
 			var extension = "png";
@@ -620,6 +622,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
 			if (testSuiteId == "EID7514777a-6cb8-499c-acd5-912496dc84e9") testSuiteDesc = "Conformance Class 6: INSPIRE Interoperable Spatial Data Services metadata";
 			if (testSuiteId == "EIDa593a7ad-42d9-46d0-985d-9dff3e684428") testSuiteDesc = "Conformance Class 7: INSPIRE Harmonised Spatial Data Services metadata";
+			if (testSuiteId == "EID7cceba68-e575-4429-9959-1b6b3d201b6d") testSuiteDesc = "Conformance Class 8: INSPIRE data sets and data set series linked service metadata";	
 			if (testSuiteId == "EIDeec9d674-d94b-4d8d-b744-1309c6cae1d2") testSuiteDesc = "Conformance Class View Service WMS";
 			if (testSuiteId == "EID550ceacf-b3cb-47a0-b2dd-d3edb18344a9") testSuiteDesc = "Conformance Class View Service WMTS";
 			if (testSuiteId == "EIDed2d3501-d700-4ff9-b9bf-070dece8ddbd") testSuiteDesc = "Conformance Class Direct WFS";

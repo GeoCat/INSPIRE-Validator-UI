@@ -26,7 +26,7 @@ ngApp.controller('myValidatorController', function($scope) {
 	$("#captchaContainer").show();
 
 	$scope.roundNumber = function(i) {
-		return Math.round(i + 0.4);
+		return Math.round(i + 0.5);
 	}
 
 	$("#verifyCaptcha").click(function() {
