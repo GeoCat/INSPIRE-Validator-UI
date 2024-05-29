@@ -36,6 +36,12 @@ a p {
 .ecl-page-header-core .ecl-container .ecl-container {
   border-bottom: 1px solid var(--gc-border-color);
 }
+@media (max-width: 996px) {
+  .ecl-page-header-core .ecl-container .ecl-container {
+    border-bottom: 0;
+    padding-top: 10px;
+  }
+}
 .ecl-page-header-core__title {
   color: var(--gc-color);
 }
@@ -46,22 +52,6 @@ a p {
   float: right;
   width: auto;
   height: 30px;
-}
-.gc-logo-small {
-  display: none;
-}
-.gc-subtitle {
-  display: none;
-}
-@media (max-width: 425px) {
-  .gc-logo-small {
-    display: block;
-    width: auto;
-    height: 20px;
-  }
-  .gc-logo {
-    display: none;
-  }
 }
 
 /* footer */
@@ -85,6 +75,11 @@ a p {
 }
 .ecl-menu__link, .ecl-menu__link:active, .ecl-menu__link:focus, .ecl-menu__link:hover {
   background-color: var(--gc-link-color);
+}
+@media (min-width: 996px) {
+  .ecl-site-header-standardised .ecl-menu {
+    background-color: var(--gc-background-color-body);
+  }
 }
 @media (min-width: 996px) {
   .ecl-menu:not(.ecl-menu--forced-mobile) .ecl-menu__link {
@@ -111,6 +106,35 @@ a p {
     transition-property: background-color, border-bottom-color, color, z-index;
     z-index: 16;
     filter: brightness(100%);
+  }
+}
+
+/* menu */
+@media (max-width: 996px) {
+  #mainMenu {
+    top: 0;
+  }
+  #menu {
+    color: var(--gc-color);
+    padding-top: 10px;
+  }
+  #section {
+    background-color: var(--gc-background-color-body);
+  }
+  .ecl-menu__link, .ecl-menu__link:active, .ecl-menu__link:focus, .ecl-menu__link:hover {
+    background-color: var(--gc-background-color-body);
+  }
+  .ecl-menu__link:active, .ecl-menu__link:focus, .ecl-menu__link:hover {
+    color: var(--gc-color);
+  }
+  .ecl-menu__link:hover {
+    text-decoration: underline;
+  }
+  .ecl-menu__list {
+    margin-top: 10px;
+  }
+  .ecl-container .logo {
+    display: inline-block;
   }
 }
 
@@ -146,6 +170,14 @@ a:hover .validator-card .btn-inspire-blue {
   color: var(--gc-white);
   background-color: var(--gc-success);
   border-color: var(--gc-success);
+}
+
+/* texts */
+@media (min-width: 768px) {
+  .col-md-12 {
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+  }
 }
 
 /* special links */
