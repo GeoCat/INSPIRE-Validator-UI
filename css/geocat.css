@@ -147,6 +147,11 @@ a p {
   }
 }
 
+/* validator */
+.iconResults {
+  padding-top: 11px;
+}
+
 /* cards */
 .validator-card {
   background-color: var(--gc-background-color-default);
@@ -181,8 +186,12 @@ a:hover .validator-card .btn-inspire-blue {
   border-color: var(--gc-success);
 }
 @media (prefers-color-scheme: dark) {
-  a:hover .validator-card {
+  .validator-card {
     background-color: var(--gc-gray-800);
+    border-color: var(--gc-gray-800);
+  }
+  a:hover .validator-card {
+    background-color: var(--gc-gray-900);
   }
   a:hover .validator-card p {
     color: var(--gc-link-color);
@@ -195,12 +204,6 @@ a:hover .validator-card .btn-inspire-blue {
 }
 
 /* texts */
-@media (min-width: 768px) {
-  .col-md-12 {
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
-  }
-}
 
 /* special links */
 .inspire-blue {
@@ -319,6 +322,9 @@ svg.inspire-blue {
     color: var(--gc-color);
   }
   .ecl-radio__label {
+    color: var(--gc-color);
+  }
+  .ecl-checkbox__label {
     color: var(--gc-color);
   }
   .ecl-form-label {
