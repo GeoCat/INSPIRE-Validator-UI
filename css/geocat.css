@@ -53,6 +53,15 @@ a p {
   width: auto;
   height: 30px;
 }
+@media (prefers-color-scheme: dark) {
+  .gc-logo .cls-1 {
+    fill: var(--gc-color) !important;
+  }
+
+  .gc-logo .cls-2 {
+    fill: var(--gc-color) !important;
+  }
+}
 
 /* footer */
 .ecl-footer-standardised {
@@ -138,6 +147,11 @@ a p {
   }
 }
 
+/* validator */
+.iconResults {
+  padding-top: 11px;
+}
+
 /* cards */
 .validator-card {
   background-color: var(--gc-background-color-default);
@@ -171,14 +185,25 @@ a:hover .validator-card .btn-inspire-blue {
   background-color: var(--gc-success);
   border-color: var(--gc-success);
 }
-
-/* texts */
-@media (min-width: 768px) {
-  .col-md-12 {
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
+@media (prefers-color-scheme: dark) {
+  .validator-card {
+    background-color: var(--gc-gray-800);
+    border-color: var(--gc-gray-800);
+  }
+  a:hover .validator-card {
+    background-color: var(--gc-gray-900);
+  }
+  a:hover .validator-card p {
+    color: var(--gc-link-color);
+  }
+  a:hover .validator-card .btn-inspire-blue {
+    color: var(--gc-white);
+    background-color: var(--gc-success);
+    border-color: var(--gc-success);
   }
 }
+
+/* texts */
 
 /* special links */
 .inspire-blue {
@@ -188,10 +213,20 @@ a:hover .validator-card .btn-inspire-blue {
 svg.inspire-blue {
   color: var(--gc-gray-700);
 }
+@media (prefers-color-scheme: dark) {
+  svg.inspire-blue {
+    color: var(--gc-gray-200);
+  }
+}
 
 /* buttons */
 .btn-inspire-blue {
   border: 1px solid var(--gc-color);
+}
+@media (prefers-color-scheme: dark) {
+  .btn-inspire-blue {
+    color: var(--gc-color);
+  }
 }
 .btn-inspire-blue:hover, .btn-inspire-blue:active, .btn-inspire-blue:focus {
   background-color: var(--gc-success);
@@ -280,3 +315,35 @@ svg.inspire-blue {
   border: 1px solidvar(--gc-dark);
   padding: 8px;
 }
+
+/* more dark mode*/
+@media (prefers-color-scheme: dark) {
+  .ecl-u-type-heading-2 {
+    color: var(--gc-color);
+  }
+  .ecl-radio__label {
+    color: var(--gc-color);
+  }
+  .ecl-checkbox__label {
+    color: var(--gc-color);
+  }
+  .ecl-form-label {
+    color: var(--gc-color);
+  }
+  .ecl-u-type-color-black {
+    color: var(--gc-color) !important;
+  }
+  .ecl-text-input {
+    background-color: var(--gc-gray-800);
+    border: 1px solid var(--gc-gray-900);
+    color: var(--gc-color);
+  }
+  .ecl-link {
+    color: var(--gc-link-color);
+  }
+  .ecl-pagination__item--current {
+    color: var(--gc-color);
+    border-color: var(--gc-color);
+  }
+}
+
