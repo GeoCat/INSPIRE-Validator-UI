@@ -5452,11 +5452,13 @@
         <div id="metadata-upload-file" class="radio-group">
           <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-mv-none" id="title-provide-test">Provide the resource to test</h2>
           <div class="upload-group">
+              <div>
             <legend class="ecl-form-label" ng-show="select.typeResource == 'metadata'">Select the input type and upload or link the resource</legend>
             <legend class="ecl-form-label" ng-show="select.typeResource == 'viewservice'">Specify the service details</legend>
             <legend class="ecl-form-label" ng-show="select.typeResource == 'downloadservice'">Specify the service details</legend>
             <legend class="ecl-form-label" ng-show="select.typeResource == 'discoveryservice'">Specify the service details</legend>
             <legend class="ecl-form-label" ng-show="select.typeResource == 'dataset'">Select the input type and upload or link the resource</legend>
+              </div>
             <span ng-show="select.fileUploadType == 'upload' && select.typeResource == 'metadata'">Select an XML file or a ZIP file containing one or multiple XML files. The Maximum size of the uploaded file is 50 MB. The upload starts immediately after selecting the files. The 'Start' button is unlocked when the upload has been successfully completed.<br/><br/></span>
             <span ng-show="select.fileUploadType == 'remote' && select.typeResource == 'metadata'">Provide a URL to a remote XML file or a ZIP file containing one or multiple XML files, either from a request to an INSPIRE Spatial Data Service endpoint or a file repository. The download will be initiated after clicking on the 'Start' button. This download has a timeout of 120s.<br/><br/></span>
             <span ng-show="select.typeResource == 'viewservice'">Please enter a getCapabilities request to your service.<br/><br/></span>
@@ -5486,7 +5488,7 @@
                     </div>
                     <div ng-show="select.fileUploadType == 'upload'">
                       <div data-ecl-file-upload-group="true" class="ecl-form-group"><label class="ecl-form-label" for="file-upload-multiple">Upload file<span class="ecl-form-label__required">*</span></label>
-                        <div class="ecl-help-block"><div class="ecl-u-mt-xs ecl-u-type-color-grey-75">Maximum size is <strong>50 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.</div>
+                        <div class="ecl-help-block"><div class="ecl-u-type-color-grey-75">Maximum size is <strong>50 MB</strong>.<br />Encrypted documents and those containing macros are not accepted.</div>
                       </div><label class="ecl-file-upload__button-container" for="file-upload-multiple"><span data-ecl-file-upload-button="true" data-ecl-file-upload-label-choose="Choose files" data-ecl-file-upload-label-replace="Replace files" class="ecl-file-upload__button ecl-button ecl-button--primary">Choose files</span></label><input onchange="sendFileToREST()" type="file" data-ecl-auto-init="FileUpload" multiple="" data-ecl-file-upload-input="true" id="file-upload-multiple" name="file-upload-name" class="ecl-file-upload" required="" />
                         <ul class="ecl-file-upload__list" data-ecl-file-upload-list="true"></ul>
                       </div>
