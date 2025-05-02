@@ -310,9 +310,6 @@ ngApp.controller('myValidatorController', function($scope) {
 			testSuiteId = testSuiteId.replace(".json", "");
 			//testSuiteId = "EID" + testSuiteId;
 			var testSuiteDesc = testSuiteId;
-			if (testSuiteId == "EIDe3500038-e37c-4dcf-806c-6bc82d585b3b") testSuiteDesc = "Conformance Class XML encoding of ISO 19115/19119 metadata";
-			if (testSuiteId == "EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c") testSuiteDesc = "Conformance Class INSPIRE Profile based on EN ISO 19115 and EN ISO 19119";
-			if (testSuiteId == "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98") testSuiteDesc = "Conformance class Metadata for interoperability";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EIDe4a95862-9cc9-436b-9fdd-a0115d342350") testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 			if (testSuiteId == "EID2be1480a-fe42-40b2-9420-eb0e69385c80") testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";
@@ -573,5 +570,5 @@ ngApp.controller('myValidatorController', function($scope) {
 
 	$("#type-resource-1").click();
 	$scope.readDataForm();
-
+	
 });

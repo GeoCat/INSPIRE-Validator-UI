@@ -110,10 +110,6 @@ ngApp.controller('myValidatorController', function($scope) {
 		$scope.restservice.testsuiteid = [];
 		// METADATA
 		if ($scope.select.typeResource == "metadata") {
-			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "1.3") && ($scope.select.metadataRecords == "-") && ($scope.select.metadataAdvancedOptions === false)) $scope.restservice.testsuiteid = "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98";
-			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "1.3") && ($scope.select.metadataRecords == "-") && ($scope.select.metadataAdvancedOptions === true) && ($scope.select.metadataAdvancedInteroperability == true)) $scope.restservice.testsuiteid = "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98";
-			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "1.3") && ($scope.select.metadataRecords == "-") && ($scope.select.metadataAdvancedOptions === true) && ($scope.select.metadataAdvancedInteroperability == false) && ($scope.select.metadataAdvancedInspireProfile == true)) $scope.restservice.testsuiteid = "EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c";
-			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "1.3") && ($scope.select.metadataRecords == "-") && ($scope.select.metadataAdvancedOptions === true) && ($scope.select.metadataAdvancedInteroperability == false) && ($scope.select.metadataAdvancedInspireProfile == false)) $scope.restservice.testsuiteid = "EIDe3500038-e37c-4dcf-806c-6bc82d585b3b";
 			if (($scope.select.typeResource == "metadata") && ($scope.select.metadataVersion == "2.0") && ($scope.select.metadataRecords == "metadata_dataset") && ($scope.select.metadataAdvancedOptions === false)) {
 				arrayTestsuiteid = [];
 				arrayTestsuiteid.push("EID2be1480a-fe42-40b2-9420-eb0e69385c80");
@@ -740,9 +736,6 @@ ngApp.controller('myValidatorController', function($scope) {
 		var testSuiteId = $scope.restservice.testsuiteid;
 		var testSuiteDesc = "-";
 		// METADATA
-		if (testSuiteId == "EIDe3500038-e37c-4dcf-806c-6bc82d585b3b") testSuiteDesc = "Conformance Class XML encoding of ISO 19115/19119 metadata";
-		if (testSuiteId == "EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c") testSuiteDesc = "Conformance Class INSPIRE Profile based on EN ISO 19115 and EN ISO 19119";
-		if (testSuiteId == "EID9a31ecfc-6673-43c0-9a31-b4595fb53a98") testSuiteDesc = "Conformance class Metadata for interoperability";
 		if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 		if (testSuiteId == "EIDe4a95862-9cc9-436b-9fdd-a0115d342350") testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 		if (testSuiteId == "EID2be1480a-fe42-40b2-9420-eb0e69385c80") testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";
@@ -773,9 +766,6 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (testSuiteId == "EID499937ea-0590-42d2-bd7a-1cafff35ecdb") testSuiteDesc = "Conformance Class Information accessibility";
 		if (testSuiteId == "EID63f586f0-080c-493b-8ca2-9919427440cc") testSuiteDesc = "Conformance Class Reference systems";
 		if (Array.isArray(testSuiteId)) {
-			if (testSuiteId.includes("EIDe3500038-e37c-4dcf-806c-6bc82d585b3b")) testSuiteDesc = "Conformance Class XML encoding of ISO 19115/19119 metadata";
-			if (testSuiteId.includes("EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c")) testSuiteDesc = "Conformance Class INSPIRE Profile based on EN ISO 19115 and EN ISO 19119";
-			if (testSuiteId.includes("EID9a31ecfc-6673-43c0-9a31-b4595fb53a98")) vtestSuiteDesc = "Conformance class Metadata for interoperability";
 			if (testSuiteId.includes("EID59692c11-df86-49ad-be7f-94a1e1ddd8da")) testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId.includes("EIDe4a95862-9cc9-436b-9fdd-a0115d342350")) testSuiteDesc = "Conformance Class 1: Baseline metadata for data sets and data set series";
 			if (testSuiteId.includes("EID2be1480a-fe42-40b2-9420-eb0e69385c80")) testSuiteDesc = "Conformance Class 2: INSPIRE data sets and data set series interoperability metadata";

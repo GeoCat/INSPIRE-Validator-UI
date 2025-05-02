@@ -131,13 +131,13 @@
     <div class="ecl-container ecl-u-type-m">
     <form name="testSelection" action="https://inspire.ec.europa.eu/validator/v2/TestObjects" method="post" enctype="multipart/form-data">
       <input type="hidden" name="uploadTestObjectId" id="uploadTestObjectId" value="">
-    <div class="ecl-u-pb-lg-4xl" ng-controller="myValidatorController">
+    <div class="ecl-u-pb-4xl" ng-controller="myValidatorController">
       <div class="ecl-container ecl-u-type-m">
 
         <!-- UPLOAD FILE -->
         <div id="metadata-upload-file" class="radio-group">
           <h2 class="ecl-u-type-heading-2 ecl-u-type-color-black ecl-u-mv-none" id="title-provide-test">Provide the resource to test</h2>
-              <legend class="ecl-form-label"><br/>Provide a label for your test report <span class="ecl-form-label__optional">(optional)</span></legend>
+              <legend class="ecl-form-label">Provide a label for your test report <span class="ecl-form-label__optional">(optional)</span></legend>
               <span>Your test report will appear with the label below; edit the text if you wish to change it.</span><br/><br/>
               <div class="rTable">
                 <div class="rTableRow">
@@ -166,14 +166,14 @@
               <div class="rTable">
                 <div class="rTableRow">
                   <div class="rTableCell30">
-                    <div class="ecl-select__container ecl-select__container--m"><select id="file-upload-id" name="select-name"
+                    <div class="ecl-select__container ecl-select__container--s"><select id="file-upload-id" name="select-name"
                         class="ecl-select" ng-change="chooseFileUploadMode()" ng-model="inputTypeForTest">
                         <option value="remote">Remote file</option>
                         <option value="upload">File upload</option>
                       </select>
                       <div class="ecl-select__icon"><svg focusable="false" aria-hidden="true"
                           class="ecl-select__icon-shape ecl-icon ecl-icon--s ecl-icon--rotate-180">
-                          <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
+                          <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
                         </svg></div>
                     </div>
                   </div>
@@ -197,7 +197,7 @@
         </div>
 		<br>
         <div data-ecl-auto-init="Expandable" class="ecl-expandable" data-ecl-expandable="true"><button data-ecl-expandable-toggle="true" data-ecl-label-expanded="Selected Conformance Class(es)" data-ecl-label-collapsed="Selected Conformance Class(es)" aria-controls="metadata-advanced-options-content" aria-expanded="false" type="button" class="ecl-expandable__toggle ecl-button ecl-button--secondary"><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Selected Conformance Class(es)</span><svg focusable="false" aria-hidden="true" data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--after ecl-icon ecl-icon--fluid ecl-icon--rotate-180">
-			<use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
+			<use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
             </svg></span></button>
             <div class="ecl-expandable__content" id="metadata-advanced-options-content" hidden="">
 				<table>
@@ -220,11 +220,11 @@
         <div class="rTable">
           <div class="rTableRow">
             <div class="rTableCell90">
-              <button id="buttonStart" ng-click="sendRunRequest()" type="button" class="ecl-button ecl-button--call" style="float: right;"><span class="ecl-button__container"><span
+              <button id="buttonStart" ng-click="sendRunRequest()" type="button" class="ecl-button ecl-button--cta" style="float: right;"><span class="ecl-button__container"><span
                     class="ecl-button__label" data-ecl-label="true">Start test</span><svg focusable="false"
                     aria-hidden="true" data-ecl-icon="true"
                     class="ecl-button__icon ecl-button__icon--after ecl-icon ecl-icon--xs ecl-icon--rotate-90">
-                    <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
+                    <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
                   </svg></span></button>
             </div>
           </div>
@@ -257,6 +257,16 @@
     ></script>
     <script>
       ECL.autoInit();
+      if (environment === 'STAGING') {
+        $("#showProd").show();
+        $("#showStaging").hide();
+        // $("#showProd")[0].href = productionURL;
+      } else if (environment === 'PROD') {
+          $("#showProd").hide();
+          $("#showStaging").show();
+          // $("#showStaging")[0].href = stagingURL;
+      }
+      // $("#swagger")[0].href = swaggerURL;
     </script>
     <script src="../js/menu.js"></script>
   </body>

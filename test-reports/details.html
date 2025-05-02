@@ -155,6 +155,15 @@
     ></script>
     <script>
       ECL.autoInit();
+      if (environment === 'STAGING') {
+        $("#showProd").show();
+        $("#showStaging").hide();
+        //$("#showProd")[0].href = productionURL;
+	    } else if (environment === 'PROD') {
+        $("#showProd").hide();
+        $("#showStaging").show();
+        //$("#showStaging")[0].href = stagingURL;
+	    }
     </script>
   </body>
 </html>

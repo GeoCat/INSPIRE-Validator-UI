@@ -157,9 +157,9 @@
 
             <div class="ecl-row">
                 <div class="col-md-12 text_description_home">
-					          <p>The purpose of the INSPIRE Reference Validator is to help data providers, solution providers and national coordinators to check whether data sets, network services and metadata meet the requirements defined in the INSPIRE Technical Guidelines. The Validator provides detailed test reports to help implementers understand how well their data, services, metadata or software solutions are doing (or where improvements may be needed).</p>
-                    <p>The Validator is based on the <a href="https://github.com/inspire-eu-validation">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
-                    <p>The Validator has been developed under <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/are3na" title="ARE3NA Joinup page description">ARE3NA</a> and <a class="inspire-blue  underline" href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about" title="ELISE  Joinup page description">ELISE</a> Actions of the ISA/ISA2 Programmes.</p>
+                  <p>The purpose of the INSPIRE Reference Validator is to help data providers, solution providers and national coordinators to check whether data sets, network services and metadata meet the requirements defined in the INSPIRE Technical Guidelines. The Validator provides detailed test reports to help implementers understand how well their data, services, metadata or software solutions are doing (or where improvements may be needed).</p>
+                  <p>The Validator is based on the <a class="ecl-link" href="https://github.com/inspire-eu-validation">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a class="ecl-link ecl-link--standalone" href="https://github.com/inspire-eu-validation/community/issues">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a class="ecl-link" href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">changelog of the current and past releases</a> and the <a class="ecl-link" href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
+                  <p>The Validator has been developed under <a class="ecl-link" href="https://joinup.ec.europa.eu/collection/are3na" title="ARE3NA Joinup page description">ARE3NA</a> and <a class="ecl-link" href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about" title="ELISE  Joinup page description">ELISE</a> Actions of the ISA/ISA2 Programmes.</p>
                 </div>
             </div>
 
@@ -304,6 +304,19 @@
       $("#titleWebPage").show();
       $("#titleWebPageHeader").show();
     }
+
+    if (environment === 'STAGING') {
+      $("#showProd").show();
+      $("#showStaging").hide();
+      $("#showProd")[0].href = productionURL;
+	  } else if (environment === 'PROD') {
+	    $("#showProd").hide();
+      $("#showStaging").show();
+      $("#showStaging")[0].href = stagingURL;
+	  }
+    $("#swagger")[0].href = swaggerURL;
+    $("#swagger2")[0].href = swaggerURL;
+
     </script>
     <script src="../js/menu.js"></script>
   </body>

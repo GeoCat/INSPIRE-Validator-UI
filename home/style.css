@@ -1,13 +1,4 @@
-a {
-	color: #074B8C;
-	/*text-decoration: none;*/
-	word-wrap: break-word;
-}
 
-a:hover {
-	color: #03478E;
-	text-decoration: none;
-}
 
 .validator-card {
 	background-color: #fff;
@@ -125,9 +116,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-.text_description_home {
-	text-align: justify;
-}
 
 .inspire-blue {
 	color: #0065a2;
