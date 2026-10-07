@@ -20,7 +20,6 @@
   color: #222222;
 }
 
-
 .spinner {
   background: url("../img/spinner.gif") no-repeat center center;
   width: 100%;
@@ -518,10 +517,14 @@ position: relative;
     width: 85%;
 }
 
+.ecl-radio-custom {
+    margin-top: -8px;
+    margin-bottom: -9px;
+}
 
 .ecl-checkbox-custom {
-  margin-top: -8px;
-  margin-bottom: -9px;
+    margin-top: -8px;
+    margin-bottom: -9px;
 }
 
 @media (max-width: 996px) {
@@ -536,9 +539,4 @@ color: #fff;
 color: #fff;
 }
 
-}
-
-.ecl-radio-custom {
-  margin-top: -8px;
-  margin-bottom: -9px;
 }

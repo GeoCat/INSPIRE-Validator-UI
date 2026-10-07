@@ -18,7 +18,7 @@
     <script src="../lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="../js/config.js"></script>
     <script src="../js/home/controller.js"></script>
-	<script defer src="https://europa.eu/webtools/load.js" type="text/javascript"></script> 
+	<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
 
 	
 	
@@ -36,8 +36,6 @@
         <meta name="msapplication-TileColor" content="#2b5797">
         <meta name="theme-color" content="#003399">
 
-        <!--<%-- CSS from the INSPIRE CDN ---%>-->
-        <link rel="stylesheet" href="ec.eu.css">
 
         <!--<%-- JS from INSPIRE CDN --%>-->
         <script src="https://inspire.ec.europa.eu/cdn/1.0/js/jquery.min.js"></script>
@@ -46,28 +44,43 @@
         <script src="https://inspire.ec.europa.eu/cdn/1.0/js/bootstrap-select.min.js" defer></script>
         <script data-search-pseudo-elements src="https://inspire.ec.europa.eu/cdn/1.0/js/fontawesome.all.min.js"></script>
 
-        <!-- template custom section -->
-        <link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" href="../favicon.ico">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/styles/ecl-ec-preset-website.css"
-      integrity="sha256-bwtkvW7BRBAEhEEsFE/ebr7fkZvb7JOUrXuZwKxCZFs= sha384-HCcnCPOZ+XvTV9wbt8WxhQ4vnZttzmmflvh1bEZPr9z6RgXPPhdEVGW4jwajw37V sha512-WHo2OIEwQkCY8PYQ2w6tmunj+6jrUzOEBUpLYAOTZyGzOWFrT8pHmNrf7ELj+WX7/iTTP57dWASjWG5PREntqQ=="
-      crossorigin="anonymous"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/styles/ecl-ec-preset-website-print.css"
-      integrity="sha256-z/sMzUyVW7T4w7amk6OYpCzq+lWax/057gNJtaAZMcY= sha384-pCXoyvk8WHwIyzamFkdgOBzrBaM5L45RFOmajtp6175zkSpVHIxn88EbJR01zf8m sha512-xnWEhew9uVBCIZu0darcSR+eKBLMpCHKa4vmhfrToZtv2X6u7jp9ZHb2EPBstdG0HAAMBu2eDLPJoKsnfVNzdQ=="
-      crossorigin="anonymous"
-      media="print"
-    />
-
-
-    <link type="text/css" rel="stylesheet" href="../css/validator.css" />
-    <link type="text/css" rel="stylesheet" href="../css/geocat.css" />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-ec-utilities.css"
+              integrity="sha256-tIdLwIyIh9hgJZld03iHWPwYgCrPBSWL7wpTtojkce0="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-ec-default.css"
+              integrity="sha256-eYe/oOF0E6lUox+xPwOFvTaJU6mExX/mF681zlJrf40="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-reset.css"
+              integrity="sha256-zOWLsbDmv/r+0qRDSUImHL5/VuzVevsVPPcxfsKyNgE="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/ecl-ec.css"
+              integrity="sha256-IOUujRA/9MWrsRma7FZUZImP8bml0XI/y7Y89uW6reg="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <script
+              src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/scripts/ecl-ec.js"
+              integrity="sha256-qlLzqRyzAuZvE80R8QVz6Jkw1CRok1KQiaLTztBOnvI="
+              crossorigin="anonymous"
+      ></script>
+      <link type="text/css" rel="stylesheet" href="../css/validator.css" />
+      <link type="text/css" rel="stylesheet" href="../css/geocat.css" />
   </head>
   <body>
 	<script type="application/json">
@@ -79,10 +92,9 @@
 	}</script>
 
     <!-- paste the markup from the template here -->
-    <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
-      <div class="ecl-page-header-core">
-        <div class="ecl-container">
-
+    <header class="ecl-site-header ecl-site-header--has-menu " data-ecl-auto-init="SiteHeader">
+        <div class="ecl-page-header-core">
+            <div class="ecl-container">
           <a href="https://www.geocat.net" class="logo" target="_blank" title="Visit the GeoCat website">
 
             <svg class="gc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1218.9 294.8">
@@ -117,97 +129,86 @@
               </g>
             </svg>
           </a>
-          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
-          <nav id="mainMenu" class="ecl-menu" data-ecl-menu="" data-ecl-auto-init="Menu" aria-expanded="false" data-ecl-auto-initialized="true">
-            <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
-            <div class="ecl-container ecl-menu__container"><a id="menu" class="ecl-link ecl-link--standalone ecl-menu__open"
-                                                              data-ecl-menu-open=""><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
-                <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
-            </svg>Menu</a>
-                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner="">
-                    <header class="ecl-menu__inner-header"><button id="close" data-ecl-menu-close="true" type="submit"
-                                                                   class="ecl-menu__close ecl-button ecl-button--text"><span
-                            class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
-                                                                                         data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
-                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--close-filled"></use>
-                      </svg><span class="ecl-button__label" data-ecl-label="true">Close</span></span></button>
-                        <div class="ecl-menu__title">Menu</div><button id="back" data-ecl-menu-back="true" type="submit"
-                                                                       class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
-                                                                                                                                                                   aria-hidden="true" data-ecl-icon="true"
-                                                                                                                                                                   class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
-                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
-                      </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
-                </header>
-                <ul class="ecl-menu__list">
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-menu__link"
-                                                                               data-ecl-menu-link="">Home</a></li>
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-menu__link"
-                                                                                data-ecl-menu-link="">Test selection</a></li>
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-menu__link"
-                                                                                data-ecl-menu-link="">Test reports</a></li>
-                </ul>
-              </section>
+              <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
             </div>
-          </nav>
         </div>
-      </div>
+        <!-- <p class="ecl-page-header-core__description">Test your INSPIRE data, services and metadata</p> -->
+        <nav id="mainMenu" class="ecl-menu" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" data-ecl-menu-label-open="Menu" data-ecl-menu-label-close="Close" aria-expanded="false" role="navigation">
+            <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
+            <div class="ecl-container ecl-menu__container"><a class="ecl-link ecl-link--standalone ecl-link--icon ecl-button ecl-button--tertiary ecl-menu__open ecl-link--icon-only" data-ecl-menu-open><svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                <use xlink:href="../component-library/dist/sprites/icons.svg#hamburger"></use></svg>
+                <svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="../component-library/dist/sprites/icons.svg#close"></use>
+                </svg><span class="ecl-link__label">Menu</span></a>
+                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner role="application" aria-label="Menu">
+                    <header class="ecl-menu__inner-header"><button class="ecl-button ecl-button--ghost ecl-menu__close ecl-button--icon-only" type="submit" data-ecl-menu-close><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><svg class="ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+                <use xlink:href="../component-library/dist/sprites/icons.svg#close"></use>
+              </svg></span></button>
+                        <div class="ecl-menu__title">Menu</div><button class="ecl-button ecl-button--ghost ecl-menu__back" type="submit" data-ecl-menu-back><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+                <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+              </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
+                    </header><button class="ecl-button ecl-button--ghost ecl-menu__item ecl-menu__items-previous ecl-button--icon-only" type="button" data-ecl-menu-items-previous tabindex="-1"><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+              <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+            </svg><span class="ecl-button__label" data-ecl-label="true">Previous items</span></span></button><button class="ecl-button ecl-button--ghost ecl-menu__item ecl-menu__items-next ecl-button--icon-only" type="button" data-ecl-menu-items-next tabindex="-1"><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+              <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+            </svg><span class="ecl-button__label" data-ecl-label="true">Next items</span></span></button>
+                    <ul class="ecl-menu__list" data-ecl-menu-list>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Home</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Test selection</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Test reports</a></li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
     </header>
 
 
     <div class="ecl-container">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-12 smaller">
-                    <div class="page-header mt-5 mb-5">
-                        <h1 class="page-heading">Welcome to the INSPIRE Reference Validator<span id="titleWebPage" style="display: none;"> - Staging instance</span></h1>
-                        <hr>
-                    </div>
-                </div>
-            </div>
+        <div class="ecl-container">
 
             <div class="ecl-row">
-                <div class="col-md-12 text_description_home">
-                  <div class="ecl-col-12">
+                <div class="ecl-col-m-12">
+                    <h2 class="ecl-u-type-heading-2"><span>Welcome to the INSPIRE Reference Validator<span id="titleWebPage" style="display: none;"> - Staging instance</span></span>
+                    </h2>
+                </div>
+
+            </div>
+            <div class="ecl-row">
+                <div class="ecl-col-12">
                     <p class="ecl-u-type-paragraph-m text_description_home">The purpose of the INSPIRE Reference Validator is to help data providers, solution providers and national coordinators to check whether data sets, network services and metadata meet the requirements defined in the INSPIRE Technical Guidelines. The Validator provides detailed test reports to help implementers understand how well their data, services, metadata or software solutions are doing (or where improvements may be needed).</p>
                     <p class="ecl-u-type-paragraph-m text_description_home">The Validator is based on the <a href="https://github.com/inspire-eu-validation" class="ecl-link">Abstract and Executable Test Suites</a> agreed between Member States and the Commission in the INSPIRE Maintenance and Implementation Group, and includes a <a href="https://github.com/inspire-eu-validation/community/issues" class="ecl-link">helpdesk</a> to address feedback, bug reports and feature requests from the INSPIRE community. See the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/" class="ecl-link">changelog of the current and past releases</a> and the <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/tree/master/release%20strategy" class="ecl-link">release planning strategy</a> for the plan of future releases of the INSPIRE Reference Validator.</p>
                     <p class="ecl-u-type-paragraph-m text_description_home">The Validator has been developed under <a class="ecl-link" href="https://joinup.ec.europa.eu/collection/are3na" title="ARE3NA Joinup page description">ARE3NA</a> and <a class="ecl-link" href="https://joinup.ec.europa.eu/collection/elise-european-location-interoperability-solutions-e-government/about" title="ELISE  Joinup page description">ELISE</a> Actions of the ISA/ISA2 Programmes.</p>
-                  </div>
+                </div>
             </div>
 
             <a href="../test-selection/index.html">
-                <div class="validator-card">
-                    <div class="validator-card-description validator_description_text">
-
-                        <div class="row">
-                            <div class="col-sm-12 col-md-2">
-                                <svg class="svg-inline--fa fa-play-circle fa-w-16 inspire-blue fontsize100" aria-hidden="true" focusable="false" data-prefix="far" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg><!-- <i class="far fa-play-circle inspire-blue fontsize130" aria-hidden="true"></i> -->
+                <div class="ecl-card ecl-u-pa-2xl">
+                    <div class="ecl-row">
+                            <div class="ecl-col-2 ecl-u-ph-2xl">
+                                <svg class="svg-inline--fa fa-play-circle fa-w-16 fontsize100" aria-hidden="true" focusable="false" data-prefix="far" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg><!-- <i class="far fa-play-circle inspire-blue fontsize130" aria-hidden="true"></i> -->
                             </div>
-                            <div class="col-sm-12 col-md-10">
-                                <h2 class="validator-card-title-test-data">Test your data, services or metadata</h2>
-                                <p class="mt-3 mb-3">Pick your resource (data, services or metadata), select the test(s) to launch and check the results to see how well you are doing (or where you need to improve).</p>
+                            <div class="ecl-col-10">
+                                <div class="ecl-content-block__title">Test your data, services or metadata</div>
+                                <div class="mt-3 mb-3 ecl-content-block__description text_description_home">Pick your resource (data, services or metadata), select the test(s) to launch and check the results to see how well you are doing (or where you need to improve).</div>
 
-                                <button type="button" class="btn btn-inspire-blue" onclick="location.href = &#39;../test-selection/index.html&#39;">
+                                <button type="button" class="ecl-button ecl-button--primary" onclick="location.href = &#39;../test-selection/index.html&#39;">
                                     <svg class="svg-inline--fa fa-play-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="play-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"></path></svg><!-- <i class="far fa-play-circle" aria-hidden="true"></i> --> Start a test <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
                                 </button>
                             </div>
                         </div>
-                    </div>
                 </div>
             </a>
 
-            <div class="ecl-row">
+            <div class="ecl-row ecl-u-mt-m-l ecl-u-mb-m-l">
 
-                <div class="ecl-col-md-4">
+                <div class="ecl-col-4">
                     <a id="swagger2">
-                        <div class="validator-card columnbottom">
-                            <div class="validator-card-image"><svg class="svg-inline--fa fa-cog fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg><!-- <i class="fas fa-cog fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h3>API</h3></div>
-                            <div class="validator-card-description">
+                        <div class="ecl-card ecl-u-pa-2xl ecl-u-type-align-center">
+                            <svg class="svg-inline--fa fa-cog fa-w-16 fa-5x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg><!-- <i class="fas fa-cog fa-5x inspire-blue " aria-hidden="true"></i> -->
+                            <div class="ecl-content-block__title"><h3 class="ecl-u-type-heading-3">API</h3></div>
+                            <div class="ecl-content-block__description">
                                 <p>If you are a developer, you can access and call the operations of the validator API to power your own applications.</p>
-                                <br>
-                                <button type="button" class="btn btn-inspire-blue">
+                                <button type="button" class="ecl-button ecl-button--primary">
                                     <svg class="svg-inline--fa fa-cog fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"></path></svg><!-- <i class="fas fa-cog" aria-hidden="true"></i> --> Try the API <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
                                 </button>
                             </div>
@@ -215,34 +216,34 @@
                     </a>
                 </div>
 
-                <div class="ecl-col-md-4">
+                <div class="ecl-col-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/releases/">
-                        <div class="validator-card columnbottom">
-                            <div class="validator-card-image"><svg class="svg-inline--fa fa-download fa-w-16 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h3>Want more?</h3></div>
-                            <div class="validator-card-description">
+                        <div class="ecl-card ecl-u-pa-2xl ecl-u-type-align-center">
+                            <svg class="svg-inline--fa fa-download fa-w-16 fa-5x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download fa-5x inspire-blue " aria-hidden="true"></i> -->
+                            <div class="ecl-content-block__title"><h3 class="ecl-u-type-heading-3">Want more?</h3></div>
+                            <div class="ecl-content-block__description">
                                 <p>Download the software, deploy it in your own infrastructure and customise it to fit your specific needs.</p>
                                 <br>
-                                <button type="button" class="btn btn-inspire-blue">
-                                    <svg class="svg-inline--fa fa-download fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download" aria-hidden="true"></i> --> Get the software <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
+                                <button type="button" class="ecl-button ecl-button--primary">
+                                    <svg class="svg-inline--fa fa-cog fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="download" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg><!-- <i class="fas fa-download" aria-hidden="true"></i> --> Get the software <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
                                 </button>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="ecl-col-md-4">
+                <div class="ecl-col-4">
                     <a href="https://github.com/INSPIRE-MIF/helpdesk-validator/issues/new/choose">
 
-                        <div class="validator-card columnbottom">
-                            <div class="validator-card-image"><svg class="svg-inline--fa fa-comments fa-w-18 fa-5x inspire-blue" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments fa-5x inspire-blue " aria-hidden="true"></i> --></div>
-                            <div class="validator-card-title"><h3>Feedback</h3></div>
-                            <div class="validator-card-description">
+                        <div class="ecl-card ecl-u-pa-2xl ecl-u-type-align-center">
+                            <svg class="svg-inline--fa fa-comments fa-w-18 fa-5x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments fa-5x inspire-blue " aria-hidden="true"></i> -->
+                            <div class="ecl-content-block__title"><h3 class="ecl-u-type-heading-3">Feedback</h3></div>
+                            <div class="ecl-content-block__description">
 
                                 <p>Use the Community space to provide your feedback or proposals on the ATS, ETS or the ETF test framework.</p>
                                 <br>
-                                <button type="button" class="btn btn-inspire-blue">
-                                    <svg class="svg-inline--fa fa-comments fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments" aria-hidden="true"></i> --> Provide your feedback <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
+                                <button type="button" class="ecl-button ecl-button--primary">
+                                    <svg class="svg-inline--fa fa-cog fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg><!-- <i class="fas fa-comments" aria-hidden="true"></i> --> Provide your feedback <svg class="svg-inline--fa fa-external-link-alt fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 0 0 384 303.765V448H64V128h264a24.003 24.003 0 0 0 16.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z"></path></svg><!-- <i class="fas fa-external-link-alt" aria-hidden="true"></i> -->
                                 </button>
                             </div>
                         </div>
@@ -260,76 +261,47 @@
             });
         </script>
 
-        <script>
-            $(document).ready(function () {
-
-                // Select and loop the container element of the elements you want to equalise
-                $('.container').each(function () {
-
-                    // Cache the highest
-                    var highestBox = 0;
-
-                    // Select and loop the elements you want to equalise
-                    $('.columnbottom', this).each(function () {
-
-                        // If this box is higher than the cached highest then store it
-                        if ($(this).height() > highestBox) {
-                            highestBox = $(this).height();
-                        }
-
-                    });
-
-                    // Set the height of all those children to whichever was highest
-                    $('.columnbottom', this).height(highestBox);
-
-                });
-
-      });
-        </script>
-
 
 	</div>
 
 
     <!-- FOOTER -->
-    <footer class="ecl-footer-standardised">
-  <div class="ecl-container ecl-footer-standardised__container">
-    <section class="ecl-footer-standardised__section ecl-footer-standardised__section1">
-        <a href=""
-        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre T1 Unit</div>
-    </section>
-  </div>
-</footer>
+    <footer class="ecl-site-footer">
+        <div class="ecl-container ecl-site-footer__container">
+            <div class="ecl-site-footer__row">
+                <div class="ecl-site-footer__column">
+                    <div class="ecl-site-footer__section ecl-site-footer__section--site-info">
+                        <div class="ecl-site-footer__title"><a href="" class="ecl-link ecl-link--standalone ecl-site-footer__title-link">INSPIRE Reference Validator</a></div>
+                        <div class="ecl-site-footer__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre Unit T.4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <div class="balloonMessageBlue" id="hidingMessage1"><span id="baloonText1" class="ecl-form-label"></span><div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(1)">x</span></div><div class="progressBar1" id="progressBar1"><div></div></div></div>
 <div class="balloonMessageGreen" id="hidingMessage2"><span id="baloonText2" class="ecl-form-label"></span><br><span id="baloonSubText2" class="ecl-u-type-m"></span> <div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(2)">x</span></div><div class="progressBar2" id="progressBar2"><div></div></div></div>
 
 <div id="betaBanner" class="topcorner" style="display: none;position:fixed;top:0;right:0;"><img style="width:120px" src="../img/beta.png"/></div>
 
-    <script
-      src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/scripts/ecl-ec-preset-website.js"
-      integrity="sha256-knt02XXQs7zdlJu/OOHAh0tF1yRqyeQ3LdLgOV+rZOU= sha384-ob5Ph2FIGHpIbnCAgc/qG8HsAOwt1X+Vt9XfWXc9uJuBa9cVNJcIKofgBHUywSQg sha512-UA8/K8LQ6Jzna2z8bwFLdPl/99Du+AqeyYTklZqvQZu8kvzBp26LcoLKypLn3AhuqMEBwlaWCbRBsIs98tPV6A=="
-      crossorigin="anonymous"
-    ></script>
     <script>
       ECL.autoInit();
 	  
 	  if (labelStaging == true) {
-		  $("#titleWebPage").show();
-      $("#titleWebPageHeader").show();
+		$("#titleWebPage").show();
+		$("#titleWebPageHeader").show();
 	  }
-    if (environment === 'STAGING') {
-      $("#showProd").show();
-      $("#showStaging").hide();
-      $("#showProd")[0].href = productionURL;
+	  if (environment === 'STAGING') {
+		$("#showProd").show();
+		$("#showStaging").hide();
+		$("#showProd").attr("href", productionURL);
 	  } else if (environment === 'PROD') {
 	    $("#showProd").hide();
-      $("#showStaging").show();
-      $("#showStaging")[0].href = stagingURL;
+		$("#showStaging").show();
+		$("#showStaging").attr("href", stagingURL);
 	  }
-	  $("#swagger")[0].href = swaggerURL;
-	  $("#swagger2")[0].href = swaggerURL;
+	  $("#swagger").attr("href", swaggerURL);
+	  $("#swagger2").attr("href", swaggerURL);
     </script>
     <script src="../js/menu.js"></script>
   </body>

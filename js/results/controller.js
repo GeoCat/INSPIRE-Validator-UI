@@ -29,7 +29,7 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (label.length > 160) {
 			newLabel = label.substring(0, 155) + " [...]";
 		}
-		if (newLabel.length < 90) {
+		if (newLabel.length < 88) {
 			$("#testLabel_" + id).css("padding-top", "13px");
 			$("#testLabel_" + id).css("height", "31px");
 		} else {
@@ -634,8 +634,8 @@ ngApp.controller('myValidatorController', function($scope) {
 		if (typeof item === 'undefined') {
 			return "";
 		} else {
-			// testSuiteId = item.replace("//v2", "/v2");
-			// testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+			//testSuiteId = item.replace("//v2", "/v2");
+			//testSuiteId = testSuiteId.replace($scope.urlValidator + "ExecutableTestSuites/", "");
 			var index = item.indexOf("ExecutableTestSuites/") + ("ExecutableTestSuites/").length;
 			testSuiteId = item.substring(index);
 			testSuiteId = testSuiteId.replace(".json", "");
@@ -649,6 +649,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata";
 			if (testSuiteId == "EID606587df-65a8-4b7b-9eee-e0d94daaa42a") testSuiteDesc = "Conformance Class 4: INSPIRE Network Services metadata";
+			if (testSuiteId == "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb") testSuiteDesc = "Conformance Class 4b: INSPIRE Network Services metadata for Monitoring";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata.";
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
@@ -1069,19 +1070,23 @@ ngApp.controller('myValidatorController', function($scope) {
 					if ($scope.searchParameters.resourceType == "dataset") var arrayTestSuiteId = ["EID545f9e49-009b-4114-9333-7ca26413b5d4", "EID61070ae8-13cb-4303-a340-72c8b877b00a", "EID09820daf-62b2-4fa3-a95f-56a0d2b7c4d8", "EID499937ea-0590-42d2-bd7a-1cafff35ecdb", "EID63f586f0-080c-493b-8ca2-9919427440cc", "EIDe6800faf-2e56-47df-831a-75a96b35f33d", "EID8aaef94b-6a4d-47ab-a5d0-70ad5cb28b08", "EID9c31fa6e-1fab-4345-bf29-6d2c129de312", "EID334bbd38-378d-4a44-8a19-5d00df919ec0", "EID6985a681-fd81-4448-83e8-061758b9ca8c", "EID47c569bc-677d-4ce3-8411-e2b29189332a", "EID117562c2-d6e1-4345-9f7b-cba229cf6685", "EIDacc5931c-4ff0-499f-b916-3cda1603456b", "EIDee28b75e-5c80-4370-838d-ab1b18e30b13", "EIDcafb75f8-5deb-4cca-89df-d3189322e97f", "EID18b742d0-15eb-421f-bbec-7c8c5cf7ee1a", "EID1f9bc92a-5879-4e9b-bcbe-1d2d0cab0aab", "EID92032cdb-db88-42aa-96c0-70a1af9e68b1", "EIDc4fbae00-3070-49fa-b803-24c66c31ac70", "EIDdbcc48ae-6871-4444-8e95-547bc22aacb2", "EID02b7b0cb-429a-4f4e-b0db-988464fb9496", "EID0fc46305-c623-422b-b7d7-251c3b86eb7f", "EIDa32f76c7-f1d3-4d70-83ef-d51d2545fa2e", "EIDc3379b85-853e-4a35-8c3d-b64191d94587", "EID1620bd27-b881-48a2-bf2b-301541e035f4", "EID81b070d3-b17f-430b-abee-456268346912", "EIDe008001b-5233-4081-a1ae-515d7702ce02", "EIDd0b58f38-98ae-43a8-a787-9a5084c60267", "EID893b7541-c9cb-4e0a-9f84-5d55cad1866c", "EID122b2f38-302f-4271-9653-69cf86fcb5c4", "EID81b070d3-b17f-430b-abee-456268346912", "EID45133c90-1929-405c-867d-9648b0620bf7", "EIDd0b58f38-98ae-43a8-a787-9a5084c60267", "EID893b7541-c9cb-4e0a-9f84-5d55cad1866c", "EID122b2f38-302f-4271-9653-69cf86fcb5c4", "EID8222c253-8468-4b94-a46b-2d1af1698a65", "EID4c53a8c7-7cac-4531-982b-d03eb48ffa77", "EID7831c8b4-f666-4534-838a-137b30bfecbe", "EIDb529e8fa-b9f8-4758-acea-1d2af744599f", "EID828410c1-53f2-4683-bded-481ad9d4d3e9", "EID9af1c865-1cf0-43ff-9250-069df01b0948", "EID4441cbde-371f-4899-90b3-145f4fd08ebc", "EID6800c834-b4e0-4631-9209-73530fb9ccee", "EID733af9a0-312b-4f71-9aa2-977cd2134d23", "EIDdf5db9a4-b15f-4193-a6ff-6e9951af46f5", "EID9d35024d-9dd7-43a9-afff-d5aea5f51595", "EID9af1c865-1cf0-43ff-9250-069df01b0948", "EID4441cbde-371f-4899-90b3-145f4fd08ebc", "EID731621b9-2daa-49fd-99ef-9279b7f335b5", "EID733af9a0-312b-4f71-9aa2-977cd2134d23", "EIDdf5db9a4-b15f-4193-a6ff-6e9951af46f5", "EID9d35024d-9dd7-43a9-afff-d5aea5f51595", "EID9af1c865-1cf0-43ff-9250-069df01b0948", "EID4441cbde-371f-4899-90b3-145f4fd08ebc", "EIDe2610a9f-6432-489d-8238-92b1193e7a3d", "EID733af9a0-312b-4f71-9aa2-977cd2134d23", "EIDdf5db9a4-b15f-4193-a6ff-6e9951af46f5", "EID9d35024d-9dd7-43a9-afff-d5aea5f51595", "EID9af1c865-1cf0-43ff-9250-069df01b0948", "EID4441cbde-371f-4899-90b3-145f4fd08ebc", "EID14986e54-74c4-43b0-979b-d0d3e5cd0e8c", "EID733af9a0-312b-4f71-9aa2-977cd2134d23", "EIDdf5db9a4-b15f-4193-a6ff-6e9951af46f5", "EID9d35024d-9dd7-43a9-afff-d5aea5f51595", "EID9af1c865-1cf0-43ff-9250-069df01b0948", "EID4441cbde-371f-4899-90b3-145f4fd08ebc", "EIDeb35a20f-188d-4fd3-aee1-dd07eb3c3efa", "EID733af9a0-312b-4f71-9aa2-977cd2134d23", "EIDdf5db9a4-b15f-4193-a6ff-6e9951af46f5", "EID9d35024d-9dd7-43a9-afff-d5aea5f51595"];
 					if (Array.isArray(item.testTasks.TestTask) == false) {
 						var resourceType = item.testTasks.TestTask.executableTestSuite.href;
-						resourceType = resourceType.replace("//v2", "/v2");
-						resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
-						resourceType = resourceType.replace(".json", "");
+						//resourceType = resourceType.replace("//v2", "/v2");
+						//resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+						let index = resourceType.lastIndexOf("/") + 1;
+						resourceType = resourceType.substring(index);
 						resourceType = "EID" + resourceType;
+						resourceType = resourceType.replace(".json", "");
 						if (arrayTestSuiteId.includes(resourceType)) keyFoundResources = true;
 					} else {
 						var numTestSuites = item.testTasks.TestTask.length;
 						for (var i = 0; i < numTestSuites; i++) {
 							var resourceType = item.testTasks.TestTask[i].executableTestSuite.href;
-							resourceType = resourceType.replace("//v2", "/v2");
-							resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
-							resourceType = resourceType.replace(".json", "");
+							//resourceType = resourceType.replace("//v2", "/v2");
+							//resourceType = resourceType.replace($scope.urlValidator + "ExecutableTestSuites/", "");
+							let index = resourceType.lastIndexOf("/") + 1;
+                            resourceType = resourceType.substring(index);
 							resourceType = "EID" + resourceType;
+							resourceType = resourceType.replace(".json", "");
 							if (arrayTestSuiteId.includes(resourceType)) keyFoundResources = true;
 						}
 					}

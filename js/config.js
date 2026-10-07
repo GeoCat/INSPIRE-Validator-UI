@@ -2,7 +2,7 @@ var captchaEnabled = true;
 var betaBanner = false;
 var labelStaging = true;
 var environment = "STAGING";
-var validatorVersionLabel = "2024.3 (2024-09-15)";
+var validatorVersionLabel = "2025.1.1 (2025-11-19)";
 var stagingURL = "https://inspire.ec.europa.eu/validator-staging/home/index.html";
 var productionURL = "https://inspire.ec.europa.eu/validator/home/index.html";
 
@@ -14,6 +14,6 @@ var serverCaptchaURL = "https://inspire.ec.europa.eu/validator-staging/captcha/v
 var serverToken = "";
 var swaggerURL = "https://inspire.ec.europa.eu/validator-staging/swagger-ui.html";
 var timeUpMessage= "";
-// Production
-//var swaggerURL = "https://inspire.ec.europa.eu/validator/swagger-ui.html"
-//var timeUpMessage="Test Reports are kept for a maximum of 48 hours.";
+var logServerUrl = "https://inspire.ec.europa.eu/validator-logs/log";
+var logEnabled = false;
+

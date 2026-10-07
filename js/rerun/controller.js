@@ -4,6 +4,21 @@ ngApp.controller('myValidatorController', function($scope) {
 	$scope.betaBanner = betaBanner;
 	$scope.labelStaging = labelStaging;
 	$scope.serverToken = serverToken;
+	$scope.logEnabled = logEnabled;
+	$scope.captchaEnabled = captchaEnabled;
+
+
+	// Show/Hide captcha
+	if ($scope.captchaEnabled == true) {
+		$("#metadata-upload-file2").hide();
+		$("#buttonStart").prop("disabled", true);
+		$("#captchaContainer").show();
+	} else {
+		$("#metadata-upload-file2").show();
+		$("#buttonStart").prop("disabled", true);
+		$("#captchaContainer").hide();
+	}
+
 
 	// Show/Hide Beta banner
 	if ($scope.betaBanner == true) {
@@ -21,9 +36,6 @@ ngApp.controller('myValidatorController', function($scope) {
 		cache: false
 	});
 
-	$("#metadata-upload-file2").hide();
-	$("#buttonStart").prop("disabled", true);
-	$("#captchaContainer").show();
 
 	$scope.roundNumber = function(i) {
 		return Math.round(i + 0.5);
@@ -214,6 +226,25 @@ ngApp.controller('myValidatorController', function($scope) {
 		}
 	}
 
+
+		$scope.logRunRequest = function(type, executableTestSuiteIds, testObjectID, label, testRunID) {
+    	     var requestJSON = {
+              	  type: "POST",
+              				url: logServerUrl,
+              				data: JSON.stringify({param: "{action: \"" + type +"\", testRunID: \"" + testRunID + "\", testObjectID: \"" + testObjectID + "\", executableTestSuiteIds: \""+ executableTestSuiteIds +  "\", label: \"" + label +"\"}"}),
+              				contentType: "application/json; charset=utf-8",
+              				dataType: "json",
+              				success: function(data) {
+              					console.log(data);
+              				},
+              				error: function(errMsg) {
+              				    console.log(errMsg)
+              				}
+              			};
+              	  $.ajax(requestJSON);
+    	}
+
+
 	$scope.sendRunRequest = function() {
 		var testSuiteIdToBeSent;
 		var error = false;
@@ -279,7 +310,12 @@ ngApp.controller('myValidatorController', function($scope) {
 				success: function(data) {
 					console.log(data);
 					console.log(data.EtfItemCollection.testRuns.TestRun.id);
-					location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("RUN_TEST" , testSuiteIdToBeSent, testId || remoteFile, label, data.EtfItemCollection.testRuns.TestRun.id);
+					}
+				    setTimeout(function() {
+                        location.href = "../test-run/index.html?id=" + data.EtfItemCollection.testRuns.TestRun.id;;
+                    }, 1000);
 				},
 				error: function(errMsg) {
 					$(document.body).css({
@@ -294,6 +330,9 @@ ngApp.controller('myValidatorController', function($scope) {
 						opacity: 1.0
 					}, 2500).fadeOut(12000);
 					progress(12, 12, $('#progressBar3'));
+					if ($scope.logEnabled == true) {
+					   $scope.logRunRequest("ERROR_TEST" , testSuiteIdToBeSent, testId || remoteFile, label, null);
+				    }
 				}
 			}
 			if ($scope.serverToken != "") requestJSON.headers = { 'x-api-key': $scope.serverToken }
@@ -317,6 +356,7 @@ ngApp.controller('myValidatorController', function($scope) {
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata";
 			if (testSuiteId == "EID606587df-65a8-4b7b-9eee-e0d94daaa42a") testSuiteDesc = "Conformance Class 4: INSPIRE Network Services metadata";
+			if (testSuiteId == "EIDb0e0e8dd-68f8-461e-9090-d6fad9418cdb") testSuiteDesc = "Conformance Class 4b: INSPIRE Network Services metadata for Monitoring";
 			if (testSuiteId == "EID59692c11-df86-49ad-be7f-94a1e1ddd8da") testSuiteDesc = "Common Requirements for ISO/TC 19139:2007 based INSPIRE metadata records";
 			if (testSuiteId == "EID8f869e23-c9e9-4e86-8dca-be30ff421229") testSuiteDesc = "Conformance Class 3: INSPIRE Spatial Data Service baseline metadata.";
 			if (testSuiteId == "EID8db54d8a-8578-4959-b891-5394d9f53a28") testSuiteDesc = "Conformance Class 5: INSPIRE Invocable Spatial Data Services metadata";
@@ -570,5 +610,5 @@ ngApp.controller('myValidatorController', function($scope) {
 
 	$("#type-resource-1").click();
 	$scope.readDataForm();
-	
+
 });

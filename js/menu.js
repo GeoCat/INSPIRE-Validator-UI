@@ -1,16 +1,18 @@
     $(document).ready(function () {
 
+     const mainMenu = document.getElementById("mainMenu");
+     const support = document.getElementById("menu_support");
+     const more = document.getElementById("menu_more");
+     const section = document.getElementById("section");
+
+     section.classList.remove("ecl-menu__item--current", 'ecl-menu__item--has-children', 'ecl-menu__item--expanded');
+
     window.addEventListener("resize", function() {
          if (window.innerWidth > 995) {
                   mainMenu.setAttribute("aria-expanded", "false");
             }
     })
-                const mainMenu = document.getElementById("mainMenu");
-                const support = document.getElementById("menu_support");
-                const more = document.getElementById("menu_more");
-                const section = document.getElementById("section");
 
-                section.classList.remove("ecl-menu__item--current", 'ecl-menu__item--has-children', 'ecl-menu__item--expanded');
 
 
 
