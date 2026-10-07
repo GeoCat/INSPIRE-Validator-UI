@@ -13,7 +13,6 @@
       cl.remove('no-js');
       cl.add('has-js');
     </script>
-	<script defer src="https://europa.eu/webtools/load.js" type="text/javascript"></script>
     <script src="../lib/angularjs/angular.min.js"></script>
     <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
     <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
@@ -24,40 +23,51 @@
     <script src="../js/testrun/externalFunctions.js"></script>
     <script src="../js/testrun/app.js"></script>
     <script src="../js/testrun/controller.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/styles/ecl-ec-preset-website.css"
-      integrity="sha256-bwtkvW7BRBAEhEEsFE/ebr7fkZvb7JOUrXuZwKxCZFs= sha384-HCcnCPOZ+XvTV9wbt8WxhQ4vnZttzmmflvh1bEZPr9z6RgXPPhdEVGW4jwajw37V sha512-WHo2OIEwQkCY8PYQ2w6tmunj+6jrUzOEBUpLYAOTZyGzOWFrT8pHmNrf7ELj+WX7/iTTP57dWASjWG5PREntqQ=="
-      crossorigin="anonymous"
-      media="screen"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/styles/ecl-ec-preset-website-print.css"
-      integrity="sha256-z/sMzUyVW7T4w7amk6OYpCzq+lWax/057gNJtaAZMcY= sha384-pCXoyvk8WHwIyzamFkdgOBzrBaM5L45RFOmajtp6175zkSpVHIxn88EbJR01zf8m sha512-xnWEhew9uVBCIZu0darcSR+eKBLMpCHKa4vmhfrToZtv2X6u7jp9ZHb2EPBstdG0HAAMBu2eDLPJoKsnfVNzdQ=="
-      crossorigin="anonymous"
-      media="print"
-    />
-    <link type="text/css" rel="stylesheet" href="../css/validator.css" />
-    <link type="text/css" rel="stylesheet" href="../css/geocat.css" />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-ec-utilities.css"
+              integrity="sha256-tIdLwIyIh9hgJZld03iHWPwYgCrPBSWL7wpTtojkce0="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-ec-default.css"
+              integrity="sha256-eYe/oOF0E6lUox+xPwOFvTaJU6mExX/mF681zlJrf40="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/optional/ecl-reset.css"
+              integrity="sha256-zOWLsbDmv/r+0qRDSUImHL5/VuzVevsVPPcxfsKyNgE="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <link
+              rel="stylesheet"
+              href="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/styles/ecl-ec.css"
+              integrity="sha256-IOUujRA/9MWrsRma7FZUZImP8bml0XI/y7Y89uW6reg="
+              crossorigin="anonymous"
+              media="screen"
+      />
+      <script
+              src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v4.1.2/ec/scripts/ecl-ec.js"
+              integrity="sha256-qlLzqRyzAuZvE80R8QVz6Jkw1CRok1KQiaLTztBOnvI="
+              crossorigin="anonymous"
+      ></script>
+      <link type="text/css" rel="stylesheet" href="../css/validator.css" />
+      <link type="text/css" rel="stylesheet" href="../css/geocat.css" />
   <link rel="shortcut icon" href="../favicon.ico">
   </head>
   <body ng-app="myNgValidator">
 
-	<script type="application/json">
-	{
-		"utility" : "cck",
-		"url": {
-			"en": "https://www.geocat.net/about-geocat/gdpr-privacy/"
-		}
-	}</script>
 
     <!-- paste the markup from the template here -->
-    <header data-ecl-auto-init="SiteHeaderStandardised" class="ecl-site-header-standardised">
-      <div class="ecl-page-header-core">
-        <div class="ecl-container">
-          <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
-          <a href="https://www.geocat.net" class="logo" target="_blank" title="Visit the GeoCat website">
+    <header class="ecl-site-header ecl-site-header--has-menu " data-ecl-auto-init="SiteHeader">
+        <div class="ecl-page-header-core">
+            <div class="ecl-container">
+          <a href="https://www.geocat.com" class="logo" target="_blank" title="Visit the GeoCat website">
 
             <svg class="gc-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1218.9 294.8">
               <defs>
@@ -91,53 +101,51 @@
               </g>
             </svg>
           </a>
-          <nav id="mainMenu" class="ecl-menu" data-ecl-menu="" data-ecl-auto-init="Menu" aria-expanded="false" data-ecl-auto-initialized="true">
-            <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
-            <div class="ecl-container ecl-menu__container"><a id="menu" class="ecl-link ecl-link--standalone ecl-menu__open"
-                                                              data-ecl-menu-open=""><svg focusable="false" aria-hidden="true" class="ecl-icon ecl-icon--s">
-                <use xlink:href="../component-library/dist/sprites/icons.svg#general--hamburger"></use>
-            </svg>Menu</a>
-                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner="">
-                    <header class="ecl-menu__inner-header"><button id="close" data-ecl-menu-close="true" type="submit"
-                                                                   class="ecl-menu__close ecl-button ecl-button--text"><span
-                            class="ecl-menu__close-container ecl-button__container"><svg focusable="false" aria-hidden="true"
-                                                                                         data-ecl-icon="true" class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s">
-                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--close-filled"></use>
-                      </svg><span class="ecl-button__label" data-ecl-label="true">Close</span></span></button>
-                        <div class="ecl-menu__title">Menu</div><button id="back" data-ecl-menu-back="true" type="submit"
-                                                                       class="ecl-menu__back ecl-button ecl-button--text"><span class="ecl-button__container"><svg focusable="false"
-                                                                                                                                                                   aria-hidden="true" data-ecl-icon="true"
-                                                                                                                                                                   class="ecl-button__icon ecl-button__icon--before ecl-icon ecl-icon--s ecl-icon--rotate-270">
-                        <use xlink:href="../component-library/dist/sprites/icons.svg#ui--corner-arrow"></use>
-                      </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
-                </header>
-                <ul class="ecl-menu__list">
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../index.html" class="ecl-menu__link"
-                                                                               data-ecl-menu-link="">Home</a></li>
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-menu__link"
-                                                                                data-ecl-menu-link="">Test selection</a></li>
-                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-menu__link"
-                                                                                data-ecl-menu-link="">Test reports</a></li>
-                </ul>
-              </section>
+              <h1 class="ecl-page-header-core__title gc-block-inline">INSPIRE Reference Validator<span id="titleWebPageHeader" style="display: none;"> - GeoCat instance</span></h1>
             </div>
-          </nav>
         </div>
-      </div>
+        <!-- <p class="ecl-page-header-core__description">Test your INSPIRE data, services and metadata</p> -->
+        <nav class="ecl-menu" data-ecl-menu data-ecl-menu-max-lines="2" data-ecl-auto-init="Menu" data-ecl-menu-label-open="Menu" data-ecl-menu-label-close="Close" aria-expanded="false" role="navigation">
+            <div class="ecl-menu__overlay" data-ecl-menu-overlay="true"></div>
+            <div class="ecl-container ecl-menu__container"><a class="ecl-link ecl-link--standalone ecl-link--icon ecl-button ecl-button--tertiary ecl-menu__open ecl-link--icon-only" data-ecl-menu-open><svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                <use xlink:href="../component-library/dist/sprites/icons.svg#hamburger"></use></svg>
+                <svg class="ecl-icon ecl-icon--m ecl-link__icon" focusable="false" aria-hidden="true">
+                    <use xlink:href="../component-library/dist/sprites/icons.svg#close"></use>
+                </svg><span class="ecl-link__label">Menu</span></a>
+                <section id="section" class="ecl-menu__inner" data-ecl-menu-inner role="application" aria-label="Menu">
+                    <header class="ecl-menu__inner-header"><button class="ecl-button ecl-button--ghost ecl-menu__close ecl-button--icon-only" type="submit" data-ecl-menu-close><span class="ecl-button__container"><span class="ecl-button__label" data-ecl-label="true">Close</span><svg class="ecl-icon ecl-icon--m ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+                <use xlink:href="../component-library/dist/sprites/icons.svg#close"></use>
+              </svg></span></button>
+                        <div class="ecl-menu__title">Menu</div><button class="ecl-button ecl-button--ghost ecl-menu__back" type="submit" data-ecl-menu-back><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--xs ecl-icon--rotate-270 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+                <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+              </svg><span class="ecl-button__label" data-ecl-label="true">Back</span></span></button>
+                    </header><button class="ecl-button ecl-button--ghost ecl-menu__item ecl-menu__items-previous ecl-button--icon-only" type="button" data-ecl-menu-items-previous tabindex="-1"><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--s ecl-icon--rotate-270 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+              <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+            </svg><span class="ecl-button__label" data-ecl-label="true">Previous items</span></span></button><button class="ecl-button ecl-button--ghost ecl-menu__item ecl-menu__items-next ecl-button--icon-only" type="button" data-ecl-menu-items-next tabindex="-1"><span class="ecl-button__container"><svg class="ecl-icon ecl-icon--s ecl-icon--rotate-90 ecl-button__icon" focusable="false" aria-hidden="true" data-ecl-icon>
+              <use xlink:href="../component-library/dist/sprites/icons.svg#corner-arrow"></use>
+            </svg><span class="ecl-button__label" data-ecl-label="true">Next items</span></span></button>
+                    <ul class="ecl-menu__list" data-ecl-menu-list>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../home/index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Home</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-selection/index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Test selection</a></li>
+                        <li class="ecl-menu__item" data-ecl-menu-item="true"><a href="../test-reports/index.html" class="ecl-link ecl-link--standalone ecl-menu__link" data-ecl-menu-link>Test reports</a></li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
     </header>
 
-    <div class="ecl-u-pb-lg-4xl" ng-controller="myValidatorController">
+    <div class="ecl-u-pb-4xl" ng-controller="myValidatorController">
       <div ng-show="contentLoaded == false" class="spinner">
       </div>
       <div class="ecl-container ecl-u-type-m" ng-show="contentLoaded">
         <div class="ecl-container">
             <div class="ecl-row">
-                <div class="ecl-col-s-12 ecl-col-lg-3">
+                <div class="ecl-col-s-12 ecl-col-l-3">
                     <h2 class="ecl-u-type-heading-2">Test reports</h2>
                 </div>
             </div>
            <div class="ecl-row">
-             <aside class="ecl-col-12 ecl-col-lg-3">
+             <aside class="ecl-col-12 ecl-col-l-3">
                <h3 class="ecl-u-type-heading-3 ecl-u-type-color-black ecl-u-mt-l ecl-u-mt-lg-none">Search options</h3>
                <form>
                 <label class="ecl-form-label" for="text-input-search-id">Text input<br/></label>
@@ -319,38 +327,36 @@
     <div id="dialog-confirm" title="Delete test?"><p>This will delete the test results including the log files!</p></div>
 
     <!-- FOOTER -->
-    <footer class="ecl-footer-standardised">
-  <div class="ecl-container ecl-footer-standardised__container">
-    <section class="ecl-footer-standardised__section ecl-footer-standardised__section1"><a href=""
-        class="ecl-footer-standardised__title ecl-link ecl-link--standalone">INSPIRE Reference Validator</a>
-      <div class="ecl-footer-standardised__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre T1 Unit</div>
-    </section>
-  </div>
-</footer>
+    <footer class="ecl-site-footer">
+        <div class="ecl-container ecl-site-footer__container">
+            <div class="ecl-site-footer__row">
+                <div class="ecl-site-footer__column">
+                    <div class="ecl-site-footer__section ecl-site-footer__section--site-info">
+                        <div class="ecl-site-footer__title"><a href="" class="ecl-link ecl-link--standalone ecl-site-footer__title-link">INSPIRE Reference Validator</a></div>
+                        <div class="ecl-site-footer__description">The INSPIRE Validator is managed by the European Commission Joint Research Centre Unit T.4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <div id="betaBanner" class="topcorner" style="display: none;position:fixed;top:0;right:0;"><img style="width:120px" src="../img/beta.png"/></div>
 
 <div class="balloonMessageBlue" id="hidingMessage1"><span id="baloonText1" class="ecl-form-label"></span><div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(1)">x</span></div><div class="progressBar1" id="progressBar1"><div></div></div></div>
 <div class="balloonMessageGreen" id="hidingMessage2"><span id="baloonText2" class="ecl-form-label"></span><br><span id="baloonSubText2" class="ecl-u-type-m"></span> <div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(2)">x</span></div><div class="progressBar2" id="progressBar2"><div></div></div></div>
 <div class="balloonMessageRed" id="hidingMessage3"><span id="baloonText3" class="ecl-form-label"></span><br><span id="baloonSubText3" class="ecl-u-type-m"></span> <div class="crossToClose"><span class="ecl-form-label" onclick="closeBalloon(3)">x</span></div><div class="progressBar3" id="progressBar3"><div></div></div></div>
-
-    <script
-      src="https://cdn1.fpfis.tech.ec.europa.eu/ecl/v2.27.0/ec-preset-website/scripts/ecl-ec-preset-website.js"
-      integrity="sha256-knt02XXQs7zdlJu/OOHAh0tF1yRqyeQ3LdLgOV+rZOU= sha384-ob5Ph2FIGHpIbnCAgc/qG8HsAOwt1X+Vt9XfWXc9uJuBa9cVNJcIKofgBHUywSQg sha512-UA8/K8LQ6Jzna2z8bwFLdPl/99Du+AqeyYTklZqvQZu8kvzBp26LcoLKypLn3AhuqMEBwlaWCbRBsIs98tPV6A=="
-      crossorigin="anonymous"
-    ></script>
     <script>
       ECL.autoInit();
-      if (environment === 'STAGING') {
-        $("#showProd").show();
-        $("#showStaging").hide();
-        // $("#showProd")[0].href = productionURL;
-      } else if (environment === 'PROD') {
-        $("#showProd").hide();
-        $("#showStaging").show();
-        // $("#showStaging")[0].href = stagingURL;
-      }
-	    // $("#swagger")[0].href = swaggerURL;
+       if (environment === 'STAGING') {
+		$("#showProd").show();
+		$("#showStaging").hide();
+		$("#showProd").attr("href", productionURL);
+	  } else if (environment === 'PROD') {
+	    $("#showProd").hide();
+		$("#showStaging").show();
+		$("#showStaging").attr("href", stagingURL);
+	  }
+	  $("#swagger").attr("href", swaggerURL);
     </script>
     <script src="../js/menu.js"></script>
   </body>
