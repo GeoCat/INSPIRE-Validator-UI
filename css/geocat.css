@@ -353,3 +353,43 @@ svg.inspire-blue, .ecl-card svg.svg-inline--fa:not(.ecl-button svg) {
   }
 }
 
+
+/* ECL 4 adjustments */
+
+/* the page content sits in two nested .ecl-container, align the header and footer with it */
+.ecl-site-header .ecl-container, .ecl-site-footer__container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* the fa-5x class is not defined here, so the card icons grew to the card width */
+.ecl-card svg.fa-5x {
+  width: 5em;
+  height: 5em;
+}
+
+/* the header already names the instance */
+#titleWebPage {
+  display: none !important;
+}
+
+.ecl-link:not(.ecl-menu__link) {
+  color: var(--gc-link-color);
+}
+.ecl-link:not(.ecl-menu__link):hover {
+  color: var(--gc-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ecl-button--secondary {
+    background-color: transparent;
+    color: var(--gc-link-color);
+    border-color: var(--gc-link-color);
+  }
+  .ecl-button:disabled {
+    background-color: var(--gc-gray-800);
+    border-color: var(--gc-gray-800);
+    color: var(--gc-gray-400);
+    opacity: 1;
+  }
+}
