@@ -8,7 +8,7 @@
      section.classList.remove("ecl-menu__item--current", 'ecl-menu__item--has-children', 'ecl-menu__item--expanded');
 
     window.addEventListener("resize", function() {
-         if (window.innerWidth > 995) {
+         if (mainMenu && window.innerWidth > 995) {
                   mainMenu.setAttribute("aria-expanded", "false");
             }
     })
