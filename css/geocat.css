@@ -379,6 +379,12 @@ svg.inspire-blue, .ecl-card svg.svg-inline--fa:not(.ecl-button svg) {
   font-size: 5em;
 }
 
+/* test reports: js/results/controller.js gives each row a fixed height sized for ECL 2,
+   which no longer fits the ECL 4 margins and pushes the report actions out of the row */
+[id^="backgroundStatus_"] {
+  height: auto !important;
+}
+
 /* the header already names the instance */
 #titleWebPage {
   display: none !important;
