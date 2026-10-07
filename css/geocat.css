@@ -362,10 +362,21 @@ svg.inspire-blue, .ecl-card svg.svg-inline--fa:not(.ecl-button svg) {
   padding-right: 2rem;
 }
 
-/* the fa-5x class is not defined here, so the card icons grew to the card width */
-.ecl-card svg.fa-5x {
-  width: 5em;
-  height: 5em;
+/* sizing for the inline FontAwesome 5 icons, whose stylesheet came from the retired INSPIRE CDN */
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+.svg-inline--fa.fa-w-18 {
+  width: 1.125em;
+}
+.fa-5x {
+  font-size: 5em;
 }
 
 /* the header already names the instance */
